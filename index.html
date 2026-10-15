@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Materials Based on Youtube Videos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            background-color: #eef4f8; /* 落ち着いた薄いブルー */
+            color: #2c3e50; /* ダークネイビーの標準文字色 */
+            padding: 40px 20px;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1100px; /* 横幅を大きめに確保 */
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #1b2a4a; /* 洗練された濃いネイビー */
+            margin-bottom: 35px;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 15px;
+        }
+
+        /* 2カラムグリッドレイアウト */
+        ul.card-grid {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* 2カラム構成 */
+            gap: 24px;
+        }
+
+        li.card-item a {
+            display: block;
+            padding: 24px 28px;
+            background-color: #ffffff;
+            border: 2px solid #2c3e50; /* シックなネイビーの枠線 */
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1b2a4a;
+            transition: all 0.25s ease-in-out;
+            box-shadow: 0 4px 12px rgba(27, 42, 74, 0.08);
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* ホバー時の洗練された動きとカラーチェンジ */
+        li.card-item a:hover {
+            transform: translateY(-4px);
+            border-color: #1e3a8a; /* 深みのあるインディゴブルー */
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.15);
+            background-color: #f8fafc;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1b2a4a;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            display: block;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        .card-features {
+            font-size: 13.5px;
+            color: #475569;
+            line-height: 1.6;
+            font-weight: 500;
+            display: block;
+        }
+
+        .card-features span {
+            display: block;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Reading Materials Based on Youtube Videos</h1>
+
+        <ul class="card-grid">
+            <li class="card-item">
+                <a href="Why-Christianity-Did-No-Take-Root-In-Japan.html">
+                    <span class="card-title">Why Christianity Did Not Take Root in Japan</span>
+                    <span class="card-features">
+                        • Multiple Choice Questions<br>
+                        • Essay Questions & Evaluation<br>
+                        • Vocabulary Questions (20 Tasks)<br>
+                        • A4 Worksheet Printing & AI Feedback
+                    </span>
+                </a>
+            </li>
+
+            <!-- 今後新しい読み物を追加する際はこちらのカードを追加できます -->
+            <!--
+            <li class="card-item">
+                <a href="Next-Topic.html">
+                    <span class="card-title">Topic Title Here</span>
+                    <span class="card-features">
+                        • Multiple Choice Questions<br>
+                        • Essay Questions<br>
+                        • Vocabulary Quiz
+                    </span>
+                </a>
+            </li>
+            -->
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Christianity Did Not Take Root in Japan | 英検準1級レベル学習アプリ</title>
+<script src="auth.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ==================== 印刷・PDF出力専用CSS (A4・1枚完結最適化) ==================== */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 12mm 15mm 12mm 15mm; /* 適切な余白 */
+            }
+            .no-print, header, nav, .tab-content, .bg-white.shadow-sm.mb-8 { display: none !important; }
+            body { 
+                font-size: 10pt; 
+                line-height: 1.8; /* 全体の基本行間 */
+                color: #000; 
+                background: #fff; 
+                margin: 0; 
+                padding: 0; 
+            }
+            
+            /* 印刷用容器制御 */
+            .print-only-container { display: block !important; }
+            .print-target { display: none !important; }
+            .print-target.active-print { display: block !important; }
+
+            /* 本文の行間と余白 */
+            .reading-text-print p {
+                line-height: 1.95 !important;
+                font-size: 9.5pt !important;
+                text-align: justify;
+                margin-bottom: 12px !important;
+            }
+
+            /* 選択問題の行間・余白制御 */
+            .mcq-print-list li {
+                margin-bottom: 10px !important;
+                line-height: 1.6 !important;
+                font-size: 9pt !important;
+            }
+
+            /* Essay質問用ボックス */
+            .essay-print-box {
+                border: 1px solid #333;
+                padding: 10px 12px;
+                margin-top: 12px;
+                background-color: #fafafa;
+                line-height: 1.6 !important;
+            }
+        }
+        .print-only-container { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <!-- ヘッダーナビゲーション (YouTubeボタン追加) -->
+    <header class="bg-indigo-900 text-white shadow-md sticky top-0 z-50 no-print">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <h1 class="text-lg font-bold tracking-wide">Why Christianity Did Not Take Root in Japan</h1>
+            <div class="flex items-center space-x-3 mt-2 sm:mt-0">
+                <span class="text-xs text-indigo-200 hidden md:inline">各パート画面のボタンで単独印刷可能</span>
+                <!-- ★ YouTubeリンクボタン ★ -->
+                <a href="https://www.youtube.com/watch?v=fj6ecXrq3f4" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg flex items-center space-x-1 transition shadow">
+                    <span>📺</span>
+                    <span>YouTubeでチェック！</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+
+        <!-- アプリ概要バナー -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+            <div class="border-b pb-4 mb-4 flex justify-between items-start">
+                <div>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">英検準1級レベル総合学習アプリ</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Why Christianity Did Not Take Root in Japan</h2>
+                    <p class="text-slate-600 text-sm mt-1">Sengoku & Edo Period History Analysis for Eiken Pre-1st Preparation</p>
+                </div>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                本アプリは、なるためJAPAN「宣教師から見た戦国時代 日本でキリスト教が広まらなかった理由」動画を元に作成された英検準1級レベルの学習教材です。<br>
+                画面右上の「📺 YouTubeでチェック！」ボタンから元動画を視聴できます。
+            </p>
+        </div>
+
+        <!-- タブナビゲーション -->
+        <div class="flex overflow-x-auto space-x-1 border-b border-slate-200 mb-6 no-print">
+            <button onclick="showTab('part1')" id="tab-part1" class="tab-btn px-4 py-2.5 border-b-2 border-indigo-600 font-bold text-indigo-600 text-sm whitespace-nowrap">Part 1: 貿易と信者拡大</button>
+            <button onclick="showTab('part2')" id="tab-part2" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 2: 奴隷貿易と秀吉</button>
+            <button onclick="showTab('part3')" id="tab-part3" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 3: 家康と鎖国</button>
+            <button onclick="showTab('part4')" id="tab-part4" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 4: 総括</button>
+            <button onclick="showTab('part5')" id="tab-part5" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap bg-amber-50 rounded-t">✍️ Part 5: 論述採点</button>
+            <button onclick="showTab('part6')" id="tab-part6" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">📚 Part 6: 単語テスト</button>
+        </div>
+
+        <!-- PART 1 -->
+        <div id="part1" class="tab-content">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 1 学習画面】</span>
+                <button onclick="printPart(1)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 1 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 1: Foreign Trade as a Gateway and the Strategic Conversion of Daimyo
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        In 1549, Francis Xavier landed in Kagoshima, marking the formal introduction of Roman Catholicism to Japan. This arrival coincided with the chaotic Sengoku period, an era dominated by relentless warfare among regional warlords (<i>daimyo</i>). Xavier’s mission was part of a larger global counter-offensive orchestrated by the Catholic Church. Following the Protestant Reformation triggered by Martin Luther in Europe, the Papacy sought to recover its diminished prestige by expanding its congregation into Asia and the Americas. Under papal treaties, Catholic powers like Portugal and Spain embarked on maritime exploration, where religious proselytization was <u class="font-bold border-b-2 border-amber-500">inextricably</u> bound up with trade and imperial conquest.
+                    </p>
+                    <p>
+                        Initially, foreign missionaries aimed their conversion efforts at commoners, but they quickly discerned that winning over ruling lords yielded exponentially greater results. This pragmatic approach accelerated the rise of Christian <i>daimyo</i> (<i>Kirishitan daimyo</i>), such as Omura Sumitada. The primary impetus for these warlords to convert was rarely pure spiritual conviction; instead, it was overwhelmingly commercial. By receiving baptism, <i>daimyo</i> secured lucrative trade privileges with Portuguese merchants, gaining access to advanced Western technology, clocks, firearms, and critically, saltpeter—an indispensable ingredient for gunpowder during wartime.
+                    </p>
+                    <p>
+                        However, this top-down conversion strategy unleashed severe social unrest. In Omura domain, Sumitada coerced his subjects into adopting Christianity and commanded the demolition of traditional Buddhist temples and Shinto shrines. Sumitada went so far as to donate the vital port city of Nagasaki directly to the Society of Jesus. Meanwhile, powerful warlords like Oda Nobunaga observed the missionaries with calculated tolerance. Nobunaga patronized Jesuits like Luis Frois, not because he intended to embrace Catholicism, but because he sought to utilize Christianity as a strategic counterweight against militant Buddhist sects that posed a direct challenge to his political hegemony.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 1: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part1" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 1 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 1:</strong> Explain why Sengoku daimyo converted to Christianity and how Oda Nobunaga utilized the missionaries. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(1)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 2 -->
+        <div id="part2" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 2 学習画面】</span>
+                <button onclick="printPart(2)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 2 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 2: Human Trafficking and Hideyoshi’s Decisive Action
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        Following Oda Nobunaga’s assassination in 1582, Toyotomi Hideyoshi successfully unified Japan. At first, Hideyoshi maintained a tolerant attitude toward foreign trade, fully acknowledging its economic and military utility. However, his perception shifted radically during his military expedition to Kyushu in 1587. Hideyoshi was horrified to discover that thousands of Japanese citizens were being purchased by European traders and trafficked overseas as slaves. Furthermore, he learned that the strategic port of Nagasaki had been ceded to the Jesuits and heavily fortified with artillery.
+                    </p>
+                    <p>
+                        Tensions flared when the Jesuit Vice-Provincial, Gaspar Coelho, displayed a formidable armed warship to Hideyoshi at Hakata. Coelho had previously dispatched letters proposing that converted Japanese soldiers be utilized as mercenaries to assist Spain in conquering Ming Dynasty China. Recognizing these actions as unambiguous signs of European colonial expansion, Hideyoshi confronted Coelho with four direct demands, insisting on the immediate prohibition of human trafficking, the cessation of forced conversions, and the protection of native religious shrines.
+                    </p>
+                    <p>
+                        Dissatisfied with the missionaries' evasive justifications, Hideyoshi <u class="font-bold border-b-2 border-amber-500">promulgated</u> the Edict of Expulsion of Missionaries (<i>Bateren Tsuihou-rei</i>) in 1587. Although he permitted commercial trade to continue and refrained from persecuting low-ranking Japanese believers, foreign priests were ordered to vacate the country. Hostilities peaked in 1596 during the San Felipe Incident, when a shipwrecked Spanish captain allegedly declared that Spain deployed missionaries to infiltrate nations prior to military invasion. Enraged, Hideyoshi executed 26 foreign priests and Japanese Christians in Nagasaki in 1597, demonstrating that Japan would aggressively defend its territorial sovereignty.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 2: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part2" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 2 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 2:</strong> Describe the reasons why Toyotomi Hideyoshi issued the Edict of Expulsion of Missionaries in 1587. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(2)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 3 -->
+        <div id="part3" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 3 学習画面】</span>
+                <button onclick="printPart(3)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 3 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 3: Tokugawa Hegemony and the Road to National Isolation
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        Following Hideyoshi’s death, Tokugawa Ieyasu established the Tokugawa Shogunate in 1603. Ieyasu initially harbored ambitious plans to expand international commerce, courting trade not only with Spain and Portugal, but also with Protestant powers like England and the Netherlands. The Dutch and English assured Ieyasu that they sought strictly commercial relations without any intention of spreading religion. This distinction was critical for the Shogunate, as it allowed Japan to maintain profitable foreign trade while eliminating the ideological threat associated with Catholic proselytization.
+                    </p>
+                    <p>
+                        However, internal security concerns quickly overshadowed Ieyasu’s commercial ambitions. The Shogunate grew deeply alarmed by the absolute devotion that Japanese Christians pledged to God and the Pope, which directly <u class="font-bold border-b-2 border-amber-500">subverted</u> the feudal loyalty owed to the Shogun. Fearing foreign-backed subversion, the Shogunate issued nationwide edicts banning Christianity in 1612. Churches were systematically demolished, foreign missionaries were expelled or executed, and Japanese converts were subjected to brutal persecution unless they formally renounced their faith.
+                    </p>
+                    <p>
+                        The ultimate climax occurred in 1637 with the Shimabara Rebellion, a massive armed revolt led by Christian peasants protesting severe religious oppression and exorbitant taxation. Though the rebellion was suppressed after heavy casualties, it convinced the Shogunate that Christianity was a dangerous catalyst for domestic rebellion. In response, the Shogunate finalized the National Isolation policy (<i>Sakoku</i>). By 1639, Portuguese ships were permanently banned, leaving only the Dutch restricted to the artificial island of Dejima in Nagasaki under intense state surveillance for the next 250 years.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 3: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part3" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 3 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 3:</strong> Explain how Tokugawa Ieyasu and his successors dealt with Christianity and why they chose Sakoku. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(3)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 4 -->
+        <div id="part4" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 4 学習画面】</span>
+                <button onclick="printPart(4)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 4 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 4: Conclusion: Why Japan Successfully Safeguarded Its Independence
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        The failure of Christianity to take root in Japan was not a mere historical coincidence; rather, it was the direct outcome of a sophisticated defensive strategy implemented by Japan’s rulers. During the 16th and 17th centuries, numerous nations throughout Asia, Africa, and the Americas fell victim to European colonization. Typically, Western powers used missionary work to penetrate societies, convert the populace, and subsequently deploy military forces to overthrow local governments. Japan successfully resisted this fate through formidable military strength, accurate intelligence gathering, and resolute decision-making.
+                    </p>
+                    <p>
+                        During the Sengoku era, Japan possessed an extraordinary military capacity. European observers, including Jesuit Inspector Alessandro Valignano, recorded in reports that Japanese samurai were remarkably courageous and highly trained in warfare. Furthermore, Japan maintained one of the largest concentrations of firearms in the world. Recognizing that a direct military invasion of Japan was practically impossible, European colonial powers relied on religious conversion as an indirect tool for conquest. Japanese leaders clearly perceived this strategy and neutralized the threat before foreign powers could establish a foothold.
+                    </p>
+                    <p>
+                        Ultimately, Japanese rulers demonstrated extraordinary strategic flexibility. They actively engaged in foreign trade when it served the national interest, but fearlessly executed national isolation when <u class="font-bold border-b-2 border-amber-500">sovereignty</u> was endangered. By enforcing <i>Sakoku</i>, Japan preserved its political autonomy, preventing Western colonization and allowing a unique, peaceful culture to flourish throughout the Edo period. This historical episode highlights the vital importance of military readiness, pragmatic leadership, and geopolitical awareness in preserving national independence.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 4: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part4" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 4 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 4:</strong> Summarize why Japan managed to avoid European colonization during the 16th and 17th centuries. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(4)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 5: ESSAY GRADER -->
+        <div id="part5" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+                <h3 class="text-xl font-bold text-indigo-900 mb-2">✍️ Part 5: 論述採点 ＆ AI診断プロンプト生成ルーム</h3>
+                <p class="text-sm text-slate-600 mb-6">
+                    Part 1〜4の各論述問題を選択し、英語で回答（単語数目安: 60〜90語）を入力してください。<br>
+                    【5点満点の厳格な減点ルール】に従って自動判定し、さらにAI用の詳細採点プロンプトを生成します。
+                </p>
+
+                <!-- ルールカード -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 mb-6 text-xs text-slate-700 space-y-1">
+                    <p class="font-bold text-slate-900 text-sm mb-1">⚖️ 採点ルール（持ち点5点満点）:</p>
+                    <p>• <strong>内容の誤り:</strong> 史実と異なる・質問の回答になっていない場合は <strong class="text-rose-600">0点</strong></p>
+                    <p>• <strong>単語数チェック (目標 60〜90語):</strong> 60語に満たない場合は <strong class="text-rose-600">2点減点</strong> / 100語を超える場合は <strong class="text-rose-600">1点減点</strong></p>
+                    <p>• <strong>文法的破綻:</strong> あまりに文法がひどい場合は <strong class="text-rose-600">1点減点</strong></p>
+                    <p>• <strong>ロジック破綻:</strong> ロジックがメチャクチャな場合は <strong class="text-rose-600">1点減点</strong></p>
+                    <p>• <strong>本文の丸コピー:</strong> 自分の言葉を使わず読み物の文章をただの丸コピーした場合は <strong class="text-rose-600">1点減点</strong></p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-indigo-900 mb-2">1. 採点・回答したい論述タスクを選択:</label>
+                        <select id="essaySelect" onchange="changeTask()" class="w-full p-2.5 border border-slate-300 rounded-lg text-sm bg-white font-semibold text-slate-800 focus:ring-2 focus:ring-indigo-500">
+                            <option value="1">Task 1 (Part 1): Sengoku daimyo conversion & Oda Nobunaga's motive</option>
+                            <option value="2">Task 2 (Part 2): Reasons for Toyotomi Hideyoshi's Bateren Tsuihou-rei (1587)</option>
+                            <option value="3">Task 3 (Part 3): Tokugawa Ieyasu's response and adoption of Sakoku</option>
+                            <option value="4">Task 4 (Part 4): Reasons why Japan avoided European colonization</option>
+                        </select>
+                    </div>
+
+                    <div id="taskPromptDisplay" class="bg-indigo-50 p-3.5 rounded-lg border border-indigo-200 text-xs text-indigo-950 font-medium"></div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">2. あなたの回答 (English):</label>
+                        <textarea id="essayInput" rows="5" oninput="updateWordCount()" class="w-full p-3 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Write your English essay response here..."></textarea>
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span id="charCount">Characters: 0</span>
+                            <span id="wordCount" class="font-bold text-indigo-900">Words: 0 (Target: 60 - 90 words)</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <button onclick="gradeLocally()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition shadow">
+                            🎯 簡易自動採点（ルールチェック）
+                        </button>
+                        <button onclick="generateAIPrompt()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition shadow">
+                            🤖 AI診断プロンプト作成
+                        </button>
+                    </div>
+
+                    <!-- Rule Result -->
+                    <div id="localResult" class="hidden mt-4 p-4 rounded-lg bg-slate-100 border border-slate-300"></div>
+
+                    <!-- AI Prompt Generator Box -->
+                    <div id="aiPromptBox" class="hidden mt-4 p-5 rounded-lg bg-emerald-50 border border-emerald-200">
+                        <h4 class="font-bold text-emerald-950 text-sm mb-2">📋 AI診断用プロンプト（コピー用）</h4>
+                        <p class="text-xs text-emerald-800 mb-3">
+                            以下のプロンプトをコピーし、ChatGPTやGemini等の外部AIに貼り付けて実行してください。<br>
+                            返ってきた診断メッセージを下の入力ボックスに貼り付けると、アプリ上に綺麗に出力・レンダリングされます。
+                        </p>
+                        <textarea id="aiPromptText" rows="8" readonly class="w-full p-3 text-xs font-mono bg-white border border-emerald-300 rounded-lg mb-2"></textarea>
+                        <button onclick="copyPromptText()" class="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2 rounded shadow transition">
+                            📋 プロンプトをクリップボードにコピー
+                        </button>
+
+                        <div class="mt-5 pt-4 border-t border-emerald-200">
+                            <label class="block text-sm font-bold text-emerald-950 mb-1">📥 AIからの回答・診断テキストをペースト:</label>
+                            <textarea id="aiFeedbackInput" rows="5" class="w-full p-2.5 text-xs border border-emerald-300 rounded-lg bg-white" placeholder="AIが出力した評価・アドバイス・解答例をここにペースト..."></textarea>
+                            <button onclick="renderAIFeedback()" class="mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-5 py-2 rounded transition shadow">
+                                ✨ アプリ上に綺麗に出力する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Output Card (Printable Target) -->
+            <div id="aiFeedbackRender" class="hidden p-6 rounded-xl bg-white border-2 border-indigo-200 shadow-md mb-8">
+                <div class="flex justify-between items-center pb-3 border-b border-slate-200 mb-4 no-print">
+                    <h4 class="font-bold text-indigo-950 text-base">🤖 AI採点・診断アドバイスシート</h4>
+                    <button onclick="printAIFeedbackOnly()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3 py-1.5 rounded transition shadow">
+                        🖨️ 採点結果・アドバイスのみを印刷
+                    </button>
+                </div>
+                <div id="aiFeedbackContent" class="text-xs text-slate-900 whitespace-pre-wrap leading-relaxed font-sans"></div>
+            </div>
+        </div>
+
+        <!-- PART 6: VOCABULARY TEST (20 Questions) -->
+        <div id="part6" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+                <div class="flex justify-between items-center mb-4 pb-2 border-b">
+                    <div>
+                        <h3 class="text-xl font-bold text-indigo-900">📚 Part 6: Vocabulary Test (全20問)</h3>
+                        <p class="text-xs text-slate-500 mt-1">本文章（Part 1〜4）で使用されている英検準1級〜1級レベルの必須語彙テスト</p>
+                    </div>
+                    <button onclick="printPart(6)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                        🖨️ 単語テストのみを単独印刷 (ワークシート出力)
+                    </button>
+                </div>
+                <div id="vocabContainer" class="space-y-6"></div>
+            </div>
+        </div>
+
+        <!-- ==================== 印刷専用テンプレート（完全個別・行間拡張） ==================== -->
+        <div class="print-only-container">
+
+            <!-- Print Part 1 -->
+            <div id="print-page-1" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Christianity Did Not Take Root in Japan</h1>
+                    <p class="text-[9pt] text-slate-700">Part 1 Worksheet: Foreign Trade as a Gateway and Conversion</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>In 1549, Francis Xavier landed in Kagoshima, marking the formal introduction of Roman Catholicism to Japan. This arrival coincided with the chaotic Sengoku period, an era dominated by relentless warfare among regional warlords (<i>daimyo</i>). Xavier’s mission was part of a larger global counter-offensive orchestrated by the Catholic Church. Following the Protestant Reformation triggered by Martin Luther in Europe, the Papacy sought to recover its diminished prestige by expanding its congregation into Asia and the Americas. Under papal treaties, Catholic powers like Portugal and Spain embarked on maritime exploration, where religious proselytization was <u><b>inextricably</b></u> bound up with trade and imperial conquest.</p>
+                    <p>Initially, foreign missionaries aimed their conversion efforts at commoners, but they quickly discerned that winning over ruling lords yielded exponentially greater results. This pragmatic approach accelerated the rise of Christian <i>daimyo</i> (<i>Kirishitan daimyo</i>), such as Omura Sumitada. The primary impetus for these warlords to convert was rarely pure spiritual conviction; instead, it was overwhelmingly commercial. By receiving baptism, <i>daimyo</i> secured lucrative trade privileges with Portuguese merchants, gaining access to advanced Western technology, clocks, firearms, and critically, saltpeter—an indispensable ingredient for gunpowder during wartime.</p>
+                    <p>However, this top-down conversion strategy unleashed severe social unrest. In Omura domain, Sumitada coerced his subjects into adopting Christianity and commanded the demolition of traditional Buddhist temples and Shinto shrines. Sumitada went so far as to donate the vital port city of Nagasaki directly to the Society of Jesus. Meanwhile, powerful warlords like Oda Nobunaga observed the missionaries with calculated tolerance. Nobunaga patronized Jesuits like Luis Frois, not because he intended to embrace Catholicism, but because he sought to utilize Christianity as a strategic counterweight against militant Buddhist sects that posed a direct challenge to his political hegemony.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-1"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 1 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Explain why Sengoku daimyo converted to Christianity and how Oda Nobunaga utilized the missionaries.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 2 -->
+            <div id="print-page-2" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Christianity Did Not Take Root in Japan</h1>
+                    <p class="text-[9pt] text-slate-700">Part 2 Worksheet: Human Trafficking and Hideyoshi's Action</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>Following Oda Nobunaga’s assassination in 1582, Toyotomi Hideyoshi successfully unified Japan. At first, Hideyoshi maintained a tolerant attitude toward foreign trade, fully acknowledging its economic and military utility. However, his perception shifted radically during his military expedition to Kyushu in 1587. Hideyoshi was horrified to discover that thousands of Japanese citizens were being purchased by European traders and trafficked overseas as slaves. Furthermore, he learned that the strategic port of Nagasaki had been ceded to the Jesuits and heavily fortified with artillery.</p>
+                    <p>Tensions flared when the Jesuit Vice-Provincial, Gaspar Coelho, displayed a formidable armed warship to Hideyoshi at Hakata. Coelho had previously dispatched letters proposing that converted Japanese soldiers be utilized as mercenaries to assist Spain in conquering Ming Dynasty China. Recognizing these actions as unambiguous signs of European colonial expansion, Hideyoshi confronted Coelho with four direct demands, insisting on the immediate prohibition of human trafficking, the cessation of forced conversions, and the protection of native religious shrines.</p>
+                    <p>Dissatisfied with the missionaries' evasive justifications, Hideyoshi <u><b>promulgated</b></u> the Edict of Expulsion of Missionaries (<i>Bateren Tsuihou-rei</i>) in 1587. Although he permitted commercial trade to continue and refrained from persecuting low-ranking Japanese believers, foreign priests were ordered to vacate the country. Hostilities peaked in 1596 during the San Felipe Incident, when a shipwrecked Spanish captain allegedly declared that Spain deployed missionaries to infiltrate nations prior to military invasion. Enraged, Hideyoshi executed 26 foreign priests and Japanese Christians in Nagasaki in 1597, demonstrating that Japan would aggressively defend its territorial sovereignty.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-2"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 2 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Describe the reasons why Toyotomi Hideyoshi issued the Edict of Expulsion of Missionaries in 1587.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 3 -->
+            <div id="print-page-3" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Christianity Did Not Take Root in Japan</h1>
+                    <p class="text-[9pt] text-slate-700">Part 3 Worksheet: Tokugawa Hegemony and Road to Isolation</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>Following Hideyoshi’s death, Tokugawa Ieyasu established the Tokugawa Shogunate in 1603. Ieyasu initially harbored ambitious plans to expand international commerce, courting trade not only with Spain and Portugal, but also with Protestant powers like England and the Netherlands. The Dutch and English assured Ieyasu that they sought strictly commercial relations without any intention of spreading religion. This distinction was critical for the Shogunate, as it allowed Japan to maintain profitable foreign trade while eliminating the ideological threat associated with Catholic proselytization.</p>
+                    <p>However, internal security concerns quickly overshadowed Ieyasu’s commercial ambitions. The Shogunate grew deeply alarmed by the absolute devotion that Japanese Christians pledged to God and the Pope, which directly <u><b>subverted</b></u> the feudal loyalty owed to the Shogun. Fearing foreign-backed subversion, the Shogunate issued nationwide edicts banning Christianity in 1612. Churches were systematically demolished, foreign missionaries were expelled or executed, and Japanese converts were subjected to brutal persecution unless they formally renounced their faith.</p>
+                    <p>The ultimate climax occurred in 1637 with the Shimabara Rebellion, a massive armed revolt led by Christian peasants protesting severe religious oppression and exorbitant taxation. Though the rebellion was suppressed after heavy casualties, it convinced the Shogunate that Christianity was a dangerous catalyst for domestic rebellion. In response, the Shogunate finalized the National Isolation policy (<i>Sakoku</i>). By 1639, Portuguese ships were permanently banned, leaving only the Dutch restricted to the artificial island of Dejima in Nagasaki under intense state surveillance for the next 250 years.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-3"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 3 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Explain how Tokugawa Ieyasu and his successors dealt with Christianity and why they chose Sakoku.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 4 -->
+            <div id="print-page-4" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Christianity Did Not Take Root in Japan</h1>
+                    <p class="text-[9pt] text-slate-700">Part 4 Worksheet: Conclusion: Safeguarding Independence</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>The failure of Christianity to take root in Japan was not a mere historical coincidence; rather, it was the direct outcome of a sophisticated defensive strategy implemented by Japan’s rulers. During the 16th and 17th centuries, numerous nations throughout Asia, Africa, and the Americas fell victim to European colonization. Typically, Western powers used missionary work to penetrate societies, convert the populace, and subsequently deploy military forces to overthrow local governments. Japan successfully resisted this fate through formidable military strength, accurate intelligence gathering, and resolute decision-making.</p>
+                    <p>During the Sengoku era, Japan possessed an extraordinary military capacity. European observers, including Jesuit Inspector Alessandro Valignano, recorded in reports that Japanese samurai were remarkably courageous and highly trained in warfare. Furthermore, Japan maintained one of the largest concentrations of firearms in the world. Recognizing that a direct military invasion of Japan was practically impossible, European colonial powers relied on religious conversion as an indirect tool for conquest. Japanese leaders clearly perceived this strategy and neutralized the threat before foreign powers could establish a foothold.</p>
+                    <p>Ultimately, Japanese rulers demonstrated extraordinary strategic flexibility. They actively engaged in foreign trade when it served the national interest, but fearlessly executed national isolation when <u><b>sovereignty</b></u> was endangered. By enforcing <i>Sakoku</i>, Japan preserved its political autonomy, preventing Western colonization and allowing a unique, peaceful culture to flourish throughout the Edo period. This historical episode highlights the vital importance of military readiness, pragmatic leadership, and geopolitical awareness in preserving national independence.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-4"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 4 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Summarize why Japan managed to avoid European colonization during the 16th and 17th centuries.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 6 (Vocabulary Worksheet - 1 Column layout) -->
+            <div id="print-page-6" class="print-target">
+                <div class="border-b pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Vocabulary Test Worksheet</h1>
+                    <p class="text-[8.5pt] text-slate-600">Part 6: Eiken Pre-1st Key Vocabulary Test (20 Questions)</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Score: ____ / 20</span>
+                    </div>
+                </div>
+                <!-- 1カラム縦並びの単語問題リスト -->
+                <div class="space-y-2 text-[8.5pt]" id="print-vocab-list"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        // 論述タスク プロンプト定義
+        const taskPrompts = {
+            1: "Explain why Sengoku daimyo converted to Christianity and how Oda Nobunaga utilized the missionaries.",
+            2: "Describe the reasons why Toyotomi Hideyoshi issued the Edict of Expulsion of Missionaries in 1587.",
+            3: "Explain how Tokugawa Ieyasu and his successors dealt with Christianity and why they chose Sakoku.",
+            4: "Summarize why Japan managed to avoid European colonization during the 16th and 17th centuries."
+        };
+
+        // 読解選択問題データ
+        const mcqData = {
+            1: [
+                { q: "What was the main driver behind the Papacy sending Catholic missionaries to Asia in the 16th century?", options: ["To rebuild prestige lost during the Protestant Reformation", "To form military alliances with Asian kings", "To purchase silver directly from Japan", "To flee from persecution taking place in Europe"], correct: 0, exp: "正解: (A) 宗教改革（Protestant Reformation）で失った信者と権威をアジア等で挽回するためでした。" },
+                { q: "Why did many Sengoku daimyo decide to accept baptism?", options: ["They were deeply inspired by Catholic doctrine", "They were ordered to do so by the Emperor", "To secure gunpowder materials and trade privileges with Portugal", "To destroy local Buddhist temples in their own lands"], correct: 2, exp: "正解: (C) 大名の改宗の動機は主に硝石（saltpeter）や鉄砲などの貿易利益を得るため（pragmatic）でした。" },
+                { q: "What drastic action did Omura Sumitada take after converting?", options: ["He granted full religious freedom to all subjects", "He forced subjects to convert and donated Nagasaki to the Jesuits", "He drove all Portuguese traders out of his domain", "He declared war against Oda Nobunaga"], correct: 1, exp: "正解: (B) 大村純忠は領民に改宗を強要し、長崎をイエズス会に寄進しました。" },
+                { q: "What was Oda Nobunaga's primary political reason for tolerating Christian missionaries?", options: ["He planned to convert to Catholicism himself", "To study Western philosophy", "To obtain Spanish troops to unify Japan", "To use Christianity to balance against hostile militant Buddhist sects"], correct: 3, exp: "正解: (D) 信長は対立する武装寺院勢力を牽制（counterweight）するためにキリスト教を利用しました。" },
+                { q: "The underlined word 'inextricably' in Paragraph 1 is closest in meaning to:", options: ["invisibly", "inseparably", "temporarily", "accidentally"], correct: 1, exp: "正解: (B) inextricably（不可分に、切っても切れない関係で）は inseparably と同義です。" }
+            ],
+            2: [
+                { q: "What shocked Toyotomi Hideyoshi during his military campaign in Kyushu in 1587?", options: ["He was attacked by Portuguese warships in Nagasaki", "The Emperor converted to Catholicism secretly", "Spanish forces landed in Hakata to invade Japan", "He found that Japanese civilians were being sold as foreign slaves"], correct: 3, exp: "正解: (D) 九州で日本人奴隷貿易の事実と長崎の要塞化を知り、激怒しました。" },
+                { q: "What proposal by Vice-Provincial Gaspar Coelho alarmed Hideyoshi?", options: ["Using converted Japanese soldiers as mercenaries to conquer Ming China", "Building a cathedral in Kyoto", "Trading weapons directly with anti-Toyotomi lords", "Imposing heavy taxes on Japanese merchants"], correct: 0, exp: "正解: (A) コエーリョは日本人キリシタンを傭兵化して明国征服に利用するなどの提案を行いました。" },
+                { q: "What was the immediate primary directive of Hideyoshi’s 1587 Edict?", options: ["Banning all commercial foreign trade completely", "Executing all Japanese Christian converts immediately", "Ordering foreign Christian priests to leave Japan", "Declaring war on the Philippines"], correct: 2, exp: "正解: (C) バテレン追放令は宣教師（バテレン）の国外追放を命じたもので、貿易は継続が許されました。" },
+                { q: "What event in 1596 directly caused Hideyoshi to execute 26 Christians in Nagasaki?", options: ["The destruction of a Shinto shrine", "Statements from the San Felipe Incident implying missionaries preceded military conquest", "An armed peasant uprising in Kyoto", "A refusal by the Dutch to trade under Japanese laws"], correct: 1, exp: "正解: (B) サン＝フェリペ号事件で「宣教師を先行させて国を倒す」という趣旨の発言が伝えられ処刑に至りました。" },
+                { q: "The underlined word 'promulgated' in Paragraph 3 is closest in meaning to:", options: ["cancelled", "concealed", "officially announced and issued", "rejected"], correct: 2, exp: "正解: (C) promulgated は「（法令などを）発布した、公表した」という意味です。" }
+            ],
+            3: [
+                { q: "How did Protestant powers (England and the Netherlands) gain Tokugawa Ieyasu’s trust?", options: ["By supplying superior military forces", "By converting to Shintoism", "By offering free weapons to the Shogunate", "By assuring him they sought trade without religious proselytization"], correct: 3, exp: "正解: (D) オランダやイギリスは「布教せず貿易のみを行う」と約したため信頼を得ました。" },
+                { q: "Why did the Tokugawa Shogunate perceive Christianity as a direct threat to domestic stability?", options: ["Christian allegiance to God and the Pope subverted feudal loyalty to the Shogun", "Christians refused to pay any commerce taxes", "Missionaries were buying all Japanese silver", "Christian daimyo were more powerful than the Shogun"], correct: 0, exp: "正解: (A) 神やローマ教皇への絶対的忠誠が、将軍への主従関係（feudal loyalty）と反するためです。" },
+                { q: "What major event in 1637 served as the final catalyst for the Shogunate to enforce Sakoku?", options: ["The San Felipe Incident", "The Shimabara Rebellion by Christian peasants", "The arrival of Francis Xavier", "The destruction of Nagasaki port"], correct: 1, exp: "正解: (B) キリシタン農民らが起こした島原の乱（1637年）が決定的な引き金となりました。" },
+                { q: "Which European nation was allowed to maintain restricted trade at Dejima after 1639?", options: ["Spain", "Portugal", "The Netherlands", "England"], correct: 2, exp: "正解: (C) 1639年のポルトガル船排除後、出島での貿易を継続できたのはオランダ（The Netherlands）のみです。" },
+                { q: "The underlined word 'subverted' in Paragraph 2 is closest in meaning to:", options: ["strengthened", "undermined or weakened authority", "supported financially", "expanded overseas"], correct: 1, exp: "正解: (B) subvert は「（権威や体制を）覆す、損なう、切り崩す」という意味です。" }
+            ],
+            4: [
+                { q: "According to Part 4, what was the primary reason Japan avoided Western colonization?", options: ["Western nations had no interest in Asia", "Japan possessed powerful military capacity, effective intelligence, and decisive leadership", "Japan was geographically impossible for foreign ships to reach", "China protected Japan from foreign invasion"], correct: 1, exp: "正解: (B) 強大かつ練度の高い軍事力（鉄砲保有量・武士の錬度）、正確な情報力、決断力によって防ぎました。" },
+                { q: "What did Alessandro Valignano report regarding the Japanese military?", options: ["Japanese warriors were remarkably brave, highly trained, and impossible to conquer by force", "Japanese samurai were easily intimidated", "Japan lacked any knowledge of modern weapons", "Japan relied on mercenaries"], correct: 0, exp: "正解: (A) ヴァリニャーノは日本人の武力の高さを警戒し、武力征服は不可能と報告しました。" },
+                { q: "Why did European imperial powers resort to religious conversion in Japan?", options: ["European monarchs were against military warfare", "Missionaries acted independently without monarchical support", "Japanese rulers requested foreign missionaries", "Direct military invasion was deemed practically impossible due to Japan's strength"], correct: 3, exp: "正解: (D) 正面からの武力侵略が不可能だったため、宗教改宗を通じて内側から浸透・弱体化させる戦略をとりました。" },
+                { q: "What positive outcome did the Sakoku policy bring to Japan during the Edo period?", options: ["Immediate expansion of Japanese overseas colonies", "Preservation of national sovereignty and the flourishing of a unique peaceful culture", "A sudden jump in global trade volume", "Complete unification with Western nations"], correct: 1, exp: "正解: (B) 国家の主権を守り抜き、江戸時代における250年以上の平和と独自文化の開花をもたらしました。" },
+                { q: "The underlined word 'sovereignty' in Paragraph 3 is closest in meaning to:", options: ["supreme power and independence", "foreign control", "financial bankruptcy", "religious dogma"], correct: 0, exp: "正解: (A) sovereignty は「国家主権、最高権力、独立」を意味します。" }
+            ]
+        };
+
+        // 単語テストデータ (20問)
+        const vocabQuizData = [
+            { w: "Proselytization", d: "The act of attempting to convert people to another religion.", options: ["布教・改宗勧誘", "軍事演習", "海外流刑", "奴隷解放"], c: 0 },
+            { w: "Pragmatic", d: "Dealing with things sensibly based on practical considerations.", options: ["空想的な", "実利的な・現実的な", "感情的な", "伝統的な"], c: 1 },
+            { w: "Indispensable", d: "Absolutely necessary; essential.", options: ["不必要な", "絶対不可欠な", "一時的な", "高価な"], c: 1 },
+            { w: "Coerce", d: "Persuade an unwilling person by force or threats.", options: ["歓迎する", "強制する・強要する", "見送る", "助成する"], c: 1 },
+            { w: "Counterweight", d: "A weight or influence that balances another.", options: ["敵対者", "対抗手段・牽制勢力", "同盟国", "貿易通貨"], c: 1 },
+            { w: "Expedition", d: "A journey undertaken by a group with a particular purpose.", options: ["遠征・軍事行動", "宗教儀式", "講話会", "貿易取引"], c: 0 },
+            { w: "Mercenary", d: "A professional soldier hired to serve in a foreign army.", options: ["宣教師", "金銭目的の雇い兵（傭兵）", "外交官", "奴隷商人"], c: 1 },
+            { w: "Promulgate", d: "Promote or make widely known an official law.", options: ["（法律等を）発布・公表する", "廃止する", "改ざんする", "延期する"], c: 0 },
+            { w: "Precursor", d: "A person or thing that comes before another as a sign.", options: ["前兆・先駆けて現れるもの", "後継者", "最大の障害", "結論"], c: 0 },
+            { w: "Sovereignty", d: "Supreme power or authority of a self-governing state.", options: ["国家主権・統治権", "植民地", "不平等条約", "関税"], c: 0 },
+            { w: "Subvert", d: "Undermine the power and authority of an established system.", options: ["強固にする", "（体制・忠誠を）覆す・切り崩す", "支援する", "複製する"], c: 1 },
+            { w: "Exorbitant", d: "Unreasonably high (of a price or amount).", options: ["非常にリーズナブルな", "（価格や税が）過度な・法外な", "標準的な", "免除された"], c: 1 },
+            { w: "Catalyst", d: "A person or thing that precipitates an event.", options: ["障害物", "きっかけ・促進するもの（触媒）", "見物人", "犠牲者"], c: 1 },
+            { w: "Surveillance", d: "Close observation, especially of a suspected spy or criminal.", options: ["放任", "監視・見張り", "歓迎", "貿易保護"], c: 1 },
+            { w: "Foothold", d: "A secure position from which further progress may be made.", options: ["足がかり・拠点", "終着点", "障害物", "撤退路"], c: 0 },
+            { w: "Formidable", d: "Inspiring fear or respect through being impressively large or powerful.", options: ["手ぬるい", "（敵や能力が）恐ろしいほど強力な", "壊れやすい", "未熟な"], c: 1 },
+            { w: "Infiltration", d: "The action of entering or gaining access to a organization surreptitiously.", options: ["正面突破", "潜入・内通・浸透", "公表", "追放"], c: 1 },
+            { w: "Autonomy", d: "The right or condition of self-government.", options: ["依存", "自治権・自主独立", "従属", "無政府状態"], c: 1 },
+            { w: "Flourish", d: "Grow or develop in a healthy or vigorous way.", options: ["衰退する", "（文化・平和が）繁栄する・花開く", "停滞する", "崩壊する"], c: 1 },
+            { w: "Decouple", d: "Separate or disassociate two things.", options: ["結合する", "切り離す・分離する", "強化する", "拡大する"], c: 1 }
+        ];
+
+        // UI表示制御
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('border-indigo-600', 'text-indigo-600', 'font-bold');
+                el.classList.add('border-transparent', 'text-slate-500');
+            });
+            document.getElementById(tabId).classList.remove('hidden');
+            const btn = document.getElementById('tab-' + tabId);
+            if (btn) {
+                btn.classList.add('border-indigo-600', 'text-indigo-600', 'font-bold');
+                btn.classList.remove('border-transparent', 'text-slate-500');
+            }
+        }
+
+        function renderMCQs() {
+            [1, 2, 3, 4].forEach(partNum => {
+                const container = document.getElementById(`mcq-part${partNum}`);
+                const printContainer = document.getElementById(`print-mcq-${partNum}`);
+                if (!container) return;
+
+                container.innerHTML = '';
+                if (printContainer) printContainer.innerHTML = '';
+
+                mcqData[partNum].forEach((qObj, idx) => {
+                    // 画面上表示
+                    const div = document.createElement('div');
+                    div.className = 'bg-white p-4 rounded-lg border border-slate-200 shadow-sm';
+                    div.innerHTML = `
+                        <p class="font-bold text-slate-800 text-sm mb-3">${idx + 1}. ${qObj.q}</p>
+                        <div class="space-y-2 text-xs">
+                            ${qObj.options.map((opt, oIdx) => `
+                                <label class="flex items-start p-2 rounded hover:bg-slate-50 cursor-pointer border border-transparent hover:border-slate-200">
+                                    <input type="radio" name="p${partNum}_q${idx}" value="${oIdx}" onclick="checkMCQ(${partNum}, ${idx},${oIdx})" class="mt-0.5 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-slate-700 font-medium">(${String.fromCharCode(65+oIdx)})${opt}</span>
+                                </label>
+                            `).join('')}
+                        </div>
+                        <div id="fb_p${partNum}_q${idx}" class="hidden mt-3 p-3 text-xs rounded-md"></div>
+                    `;
+                    container.appendChild(div);
+
+                    // 印刷用ワークシート（そのパート専用）
+                    if (printContainer) {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <strong>${qObj.q}</strong>
+                            <div class="grid grid-cols-2 gap-x-2 gap-y-0.5 mt-0.5 text-[8pt]">
+                                ${qObj.options.map((opt, oIdx) => `<div>(${String.fromCharCode(65+oIdx)})${opt}</div>`).join('')}
+                            </div>
+                        `;
+                        printContainer.appendChild(li);
+                    }
+                });
+            });
+        }
+
+        function checkMCQ(partNum, qIdx, selectedIdx) {
+            const qObj = mcqData[partNum][qIdx];
+            const fb = document.getElementById(`fb_p${partNum}_q${qIdx}`);
+            fb.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-900', 'border-emerald-200', 'bg-rose-50', 'text-rose-900', 'border-rose-200');
+            fb.classList.add('border');
+
+            if (selectedIdx === qObj.correct) {
+                fb.classList.add('bg-emerald-50', 'text-emerald-900', 'border-emerald-200');
+                fb.innerHTML = `<strong>✓ 正解！</strong> ${qObj.exp}`;
+            } else {
+                fb.classList.add('bg-rose-50', 'text-rose-900', 'border-rose-200');
+                fb.innerHTML = `<strong>✗ 不正解</strong> ${qObj.exp}`;
+            }
+        }
+
+        function renderVocab() {
+            const container = document.getElementById('vocabContainer');
+            const printVocab = document.getElementById('print-vocab-list');
+            if (!container) return;
+
+            container.innerHTML = '';
+            if (printVocab) printVocab.innerHTML = '';
+
+            vocabQuizData.forEach((v, idx) => {
+                // 画面表示
+                const card = document.createElement('div');
+                card.className = 'bg-slate-50 p-4 rounded-lg border border-slate-200';
+                card.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-indigo-900 text-base">${idx+1}. ${v.w}</span>
+                        <span class="text-xs text-slate-500 italic font-serif">${v.d}</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        ${v.options.map((opt, oIdx) => `
+                            <button onclick="checkVocab(${idx}, ${oIdx})" class="vocab-b-${idx} text-left p-2 bg-white border border-slate-300 rounded text-xs hover:bg-indigo-50 transition font-medium">
+                                (${String.fromCharCode(65+oIdx)})${opt}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="v-fb-${idx}" class="hidden mt-2 text-xs font-bold"></div>
+                `;
+                container.appendChild(card);
+
+                // 印刷用単語テスト（1カラム縦並び ＆ 選択肢4列並び）
+                if (printVocab) {
+                    const div = document.createElement('div');
+                    div.className = 'border p-1.5 rounded mb-1';
+                    div.innerHTML = `
+                        <div class="font-bold text-[8.5pt] mb-0.5">${idx+1}. <span class="text-indigo-950 font-serif">${v.w}</span> <span class="text-[7.5pt] font-normal text-slate-600">(${v.d})</span></div>
+                        <div class="grid grid-cols-4 gap-1 text-[7.5pt]">
+                            ${v.options.map((opt, oIdx) => `<div>(${String.fromCharCode(65+oIdx)})${opt}</div>`).join('')}
+                        </div>
+                    `;
+                    printVocab.appendChild(div);
+                }
+            });
+        }
+
+        function checkVocab(vIdx, selectedOpt) {
+            const item = vocabQuizData[vIdx];
+            const fb = document.getElementById(`v-fb-${vIdx}`);
+            fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+
+            if (selectedOpt === item.c) {
+                fb.classList.add('text-emerald-600');
+                fb.textContent = "✓ 正解！ " + item.w + " = " + item.options[item.c];
+            } else {
+                fb.classList.add('text-rose-600');
+                fb.textContent = "✗ 不正解。 正解は (" + String.fromCharCode(65+item.c) + ") " + item.options[item.c];
+            }
+        }
+
+        function goToPart5(taskId) {
+            showTab('part5');
+            document.getElementById('essaySelect').value = taskId;
+            changeTask();
+        }
+
+        function changeTask() {
+            const taskId = document.getElementById('essaySelect').value;
+            const promptDisplay = document.getElementById('taskPromptDisplay');
+            promptDisplay.innerHTML = `<strong>選択中の論述問 (Task ${taskId}):</strong><br>${taskPrompts[taskId]}`;
+        }
+
+        function updateWordCount() {
+            const text = document.getElementById('essayInput').value;
+            const charCount = text.length;
+            const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+            document.getElementById('charCount').textContent = `Characters: ${charCount}`;
+            document.getElementById('wordCount').textContent = `Words: ${wordCount} (Target: 60 - 90 words)`;
+        }
+
+        // 採点機能
+        function gradeLocally() {
+            const text = document.getElementById('essayInput').value.trim();
+            const resDiv = document.getElementById('localResult');
+            resDiv.classList.remove('hidden');
+
+            if (!text) {
+                resDiv.innerHTML = `<p class="text-rose-600 text-xs font-bold">回答が入力されていません。英文を入力してください。</p>`;
+                return;
+            }
+
+            let score = 5;
+            let deductions = [];
+
+            const wordCount = text.trim().split(/\s+/).length;
+
+            if (wordCount < 60) {
+                score -= 2;
+                deductions.push(`単語数不足: 現在 ${wordCount} 語 (60語に満たないため -2点減点)`);
+            } else if (wordCount > 100) {
+                score -= 1;
+                deductions.push(`単語数超過: 現在 ${wordCount} 語 (100語を超えているため -1点減点)`);
+            }
+
+            const exactPhrases = [
+                "Francis Xavier landed in Kagoshima",
+                "Edict of Expulsion of Missionaries",
+                "human trafficking and the destruction",
+                "San Felipe Incident",
+                "Shimabara Rebellion"
+            ];
+            let copyCount = 0;
+            exactPhrases.forEach(p => { if (text.includes(p)) copyCount++; });
+            if (copyCount >= 2) {
+                score -= 1;
+                deductions.push("本文フレーズの直接的な丸コピーが検出されました (-1点減点)");
+            }
+
+            const keyWords = ["trade", "slave", "sovereignty", "conquest", "security", "threat", "power", "loyalty", "gunpowder", "isolation", "ban"];
+            const hasKeyword = keyWords.some(kw => text.toLowerCase().includes(kw));
+            if (!hasKeyword) {
+                score -= 1;
+                deductions.push("歴史的背景に関するコアキーワードが含まれていません (-1点減点)");
+            }
+
+            if (score < 0) score = 0;
+
+            resDiv.innerHTML = `
+                <div class="border-b pb-2 mb-2 flex justify-between items-center">
+                    <span class="font-bold text-slate-800 text-xs">🎯 ルールベース自動採点結果</span>
+                    <span class="text-base font-extrabold ${score >= 4 ? 'text-emerald-600' : 'text-amber-600'}">${score} / 5 点</span>
+                </div>
+                ${deductions.length > 0 ? `
+                    <ul class="list-disc pl-4 text-xs text-rose-700 space-y-1 mb-2">
+                        ${deductions.map(d => `<li>${d}</li>`).join('')}
+                    </ul>
+                ` : `<p class="text-xs text-emerald-700 font-bold mb-2">✓ 基本的な文字数・記述ルールをクリアしています！</p>`}
+                <p class="text-[10pt] text-slate-500">※精密な英文法・論理展開・解答例・添削アドバイスの生成には、下の「AI診断プロンプト作成」ボタンをご利用ください。</p>
+            `;
+        }
+
+        function generateAIPrompt() {
+            const taskId = document.getElementById('essaySelect').value;
+            const userText = document.getElementById('essayInput').value.trim();
+            const promptBox = document.getElementById('aiPromptBox');
+            const promptArea = document.getElementById('aiPromptText');
+
+            if (!userText) {
+                alert("まずは回答欄に英語で文章を入力してください。");
+                return;
+            }
+
+            const promptText = `あなたは英検準1級および歴史英語論文のプロの添削指導者です。
+以下の【厳格な採点ルール】に従い、生徒の英語解答（単語数目安: 60〜90語）を評価・添削してください。
+
+【採点ルール（持ち点：5点満点）】
+1. 内容が間違っている／質問の意図から外れている場合：即 0点
+2. 単語数ルール（目安: 60〜90語）：
+   - 60語に満たない場合： -2点減点
+   - 100語を超える場合： -1点減点
+3. 文法・表現：あまりに文法がひどい場合： -1点減点
+4. ロジック・一貫性：ロジックがメチャクチャな場合： -1点減点
+5. 丸コピーチェック：自分の言葉を使わず読み物の文章をただの丸コピーした場合：内容が合っていても -1点減点
+
+【対象タスク (Task ${taskId})】
+"${taskPrompts[taskId]}"
+
+【生徒の英語解答】
+"${userText}"
+
+【返答フォーマット（必ず以下の見出し形式で出力してください）】
+■ 評価得点: X / 5点
+
+■ 1. 提出された英文 (Original Answer):
+(生徒の解答)
+
+■ 2. 減点・修正箇所 (Corrected Version & Deductions):
+(単語数評価、文法ミスや修正ポイントの解説)
+
+■ 3. ブラッシュアップ解答例 (Refined Model Answer):
+(英検準1級レベルの60〜90語で構成された自然で洗練された模範解答英文および日本語訳)
+
+■ 4. 学習アドバイス (Educational Feedback):
+(表現・文法・論理構成に関する具体的な学習アドバイス)`;
+
+            promptArea.value = promptText;
+            promptBox.classList.remove('hidden');
+        }
+
+        function copyPromptText() {
+            const area = document.getElementById('aiPromptText');
+            area.select();
+            document.execCommand('copy');
+            alert("プロンプトをクリップボードにコピーしました！AIに貼り付けて採点させてください。");
+        }
+
+        function renderAIFeedback() {
+            const input = document.getElementById('aiFeedbackInput').value.trim();
+            const renderDiv = document.getElementById('aiFeedbackRender');
+            const contentDiv = document.getElementById('aiFeedbackContent');
+
+            if (!input) {
+                alert("AIの返答テキストを貼り付けてください。");
+                return;
+            }
+
+            contentDiv.textContent = input;
+            renderDiv.classList.remove('hidden');
+        }
+
+        // 選択されたPartのみを確実に単独出力する印刷ロジック
+        function printPart(partNum) {
+            document.querySelectorAll('.print-target').forEach(el => {
+                el.classList.remove('active-print');
+            });
+
+            const target = document.getElementById(`print-page-${partNum}`);
+            if (target) {
+                target.classList.add('active-print');
+                window.print();
+            }
+        }
+
+        // AI診断結果の単独印刷処理
+        function printAIFeedbackOnly() {
+            const printContent = document.getElementById('aiFeedbackContent').textContent;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>AI Feedback & Writing Evaluation Sheet</title>
+                    <style>
+                        body { font-family: sans-serif; font-size: 11pt; line-height: 1.6; color: #000; margin: 30px; }
+                        h1 { font-size: 16pt; border-bottom: 2px solid #000; padding-bottom: 5px; margin-bottom: 15px; }
+                        .content { white-space: pre-wrap; word-wrap: break-word; }
+                        .footer { margin-top: 30px; border-top: 1px solid #ccc; pt-10px; font-size: 9pt; text-style: italic; }
+                    </style>
+                </head>
+                <body>
+                    <h1>🤖 Essay Evaluation & Feedback Sheet</h1>
+                    <div class="content">${escapeHtml(printContent)}</div>
+                    <div class="footer">Generated by Why Christianity Did Not Take Root in Japan App</div>
+                    <script>
+                        window.onload = function() { window.print(); window.close(); };
+                    <\/script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMCQs();
+            renderVocab();
+            changeTask();
+        });
+    </script>
+</body>
+</html>
