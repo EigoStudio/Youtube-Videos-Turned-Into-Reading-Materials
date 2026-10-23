@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Did the U.S. Become Rich While Latin America Stayed Poor? | 英検準1級〜1級学習アプリ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ==================== 印刷・PDF出力専用CSS ==================== */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 12mm 15mm 12mm 15mm;
+            }
+            .no-print, header, nav, .tab-content, main > div { display: none !important; }
+            body { 
+                font-size: 10pt; 
+                line-height: 1.8; 
+                color: #000; 
+                background: #fff; 
+                margin: 0; 
+                padding: 0; 
+            }
+            .print-only-container { display: block !important; }
+            .print-target { display: none !important; }
+            .print-target.active-print { display: block !important; }
+
+            .reading-text-print p {
+                line-height: 1.95 !important;
+                font-size: 9.5pt !important;
+                text-align: justify;
+                margin-bottom: 12px !important;
+            }
+            .mcq-print-list li {
+                margin-bottom: 10px !important;
+                line-height: 1.6 !important;
+                font-size: 9pt !important;
+            }
+            .essay-print-box {
+                border: 1px solid #333;
+                padding: 10px 12px;
+                margin-top: 12px;
+                background-color: #fafafa;
+                line-height: 1.6 !important;
+            }
+        }
+        .print-only-container { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <!-- ヘッダー -->
+    <header class="bg-blue-900 text-white shadow-md sticky top-0 z-50 no-print">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <h1 class="text-lg font-bold tracking-wide">Youtube-Videos-Turned-Into-Reading-Materials</h1>
+            <div class="flex items-center space-x-3 mt-2 sm:mt-0">
+                <span class="text-xs text-blue-200 hidden md:inline">英検準1級〜1級 / 経済史・地理総合アクティビティ</span>
+                <a href="https://www.youtube.com/watch?v=_ZSGIhL6bRA" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg flex items-center space-x-1 transition shadow">
+                    <span>📺</span>
+                    <span>YouTubeで元動画を見る</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+
+        <!-- アプリ概要バナー -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+            <div class="border-b pb-4 mb-4 flex justify-between items-start">
+                <div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">シリーズ教材</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Why Did the U.S. Become Rich While Latin America Stayed Poor?</h2>
+                    <p class="text-slate-600 text-sm mt-1">Economic History, Institutional Analysis & Latin America Geography Activity</p>
+                </div>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                本アクティビティは、YouTube動画「Why Did the U.S. Become Rich While Latin America Stayed Poor? In 40 minutes」をベースにした学習プログラムです。<br>
+                読解、論述採点、単語テストに加え、**中米・カリブ海・南米地域（全27地域）に特化した本格的な地理番号暗記テスト**を搭載しています。
+            </p>
+        </div>
+
+        <!-- タブナビゲーション -->
+        <div class="flex overflow-x-auto space-x-1 border-b border-slate-200 mb-6 no-print">
+            <button onclick="showTab('part1')" id="tab-part1" class="tab-btn px-4 py-2.5 border-b-2 border-blue-600 font-bold text-blue-600 text-sm whitespace-nowrap">Part 1: 植民地の起源</button>
+            <button onclick="showTab('part2')" id="tab-part2" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 2: 制度と所有権</button>
+            <button onclick="showTab('part3')" id="tab-part3" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 3: 産業化と地理</button>
+            <button onclick="showTab('part4')" id="tab-part4" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 4: 総括</button>
+            <button onclick="showTab('part5')" id="tab-part5" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap bg-amber-50 rounded-t">✍️ Part 5: 論述採点</button>
+            <button onclick="showTab('part6')" id="tab-part6" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">📚 Part 6: 単語テスト</button>
+            <button onclick="showTab('part7')" id="tab-part7" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap bg-emerald-50 rounded-t">🗺️ Part 7: ラテンアメリカ地理 (1)-(27)</button>
+        </div>
+
+        <!-- PART 1 -->
+        <div id="part1" class="tab-content">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 1 学習画面】</span>
+                <button onclick="printPart(1)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 1 のみ単独印刷
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-blue-900 border-l-4 border-blue-600 pl-3 mb-3">
+                    Part 1: Divergent Colonial Foundations: Extraction vs. Settlement
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>Three centuries ago, European observers would have scoffed at the notion that North America would outpace Latin America economically. Cities like Mexico City and Lima were dazzling urban metropolises enriched by vast deposits of silver and gold, whereas British outposts in North America were modest agrarian settlements. However, the root of today's stark wealth disparity lies precisely in these contrasting colonial beginnings.</p>
+                    <p>In Latin America, the Spanish Crown established an <u class="font-bold border-b-2 border-amber-500">extractive</u> economic model designed to funnel mineral wealth directly back to Europe. The Spanish conquest targeted densely populated indigenous empires, enabling colonizers to institute feudal systems like the <i>encomienda</i>. These mechanisms concentrated vast land holdings and silver mines in the hands of a small colonial elite who relied heavily on forced native and African slave labor. Consequently, early Latin American societies were built upon rigid socio-economic hierarchies and extreme inequality.</p>
+                    <p>In stark contrast, North American British colonies—particularly in the North—lacked abundant precious metals or vast native populations to enslave. Settlers were forced to clear land, farm, and establish self-sustaining communities. Because the return on capital could not be extracted effortlessly through forced labor, British authorities granted land titles to smallholder farmers and established local representative assemblies. This difference in early settlement patterns laid the groundwork for entirely different institutional trajectories.</p>
+                </div>
+            </article>
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 1: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part1" class="space-y-6"></div>
+            </section>
+        </div>
+
+        <!-- PART 2 -->
+        <div id="part2" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 2 学習画面】</span>
+                <button onclick="printPart(2)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">🖨️ Part 2 のみ単独印刷</button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-blue-900 border-l-4 border-blue-600 pl-3 mb-3">Part 2: Institutions, Property Rights, and Mass Education</h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>As both regions transitioned toward independence in the late 18th and early 19th centuries, institutional differences became decisive. Economists Daron Acemoglu and James Robinson emphasize that inclusive economic and political institutions are the primary drivers of long-term national prosperity. In the United States, post-independence policy prioritized legal security, secure property rights, and the rule of law, encouraging widespread innovation and investment among ordinary citizens.</p>
+                    <p>A vital factor in North America's success was widespread land ownership and early investment in public education. Laws like the Homestead Act of 1862 distributed millions of acres of public land to small farmers, preventing land monopoly and creating a broad, politically empowered middle class. Furthermore, Northern states established universal basic education early on, creating a highly literate workforce capable of adopting complex technologies during the early Industrial Revolution.</p>
+                    <p>Conversely, independence in Latin America largely replaced Spanish officials with local landed oligarchs without reforming underlying social structures. Monopolistic land distribution persisted through giant estates (<i>haciendas</i>), leaving the vast majority of peasants landless and disenfranchised. Political instability, frequent military coups (<i>caudillismo</i>), and negligible investment in public education perpetuated widespread illiteracy and economic stagnation, leaving the region unprepared for industrialization.</p>
+                </div>
+            </article>
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 2: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part2" class="space-y-6"></div>
+            </section>
+        </div>
+
+        <!-- PART 3 -->
+        <div id="part3" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 3 学習画面】</span>
+                <button onclick="printPart(3)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">🖨️ Part 3 のみ単独印刷</button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-blue-900 border-l-4 border-blue-600 pl-3 mb-3">Part 3: Industrialization, Infrastructure, and Geography</h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>The 19th-century Industrial Revolution reshaped global power dynamics, and geography played a profound, often overlooked role. The continental United States possessed an extraordinary geographical advantage: vast expanses of fertile, temperate plains interconnected by navigable river networks like the Mississippi. River transport made moving agricultural goods and coal <u class="font-bold border-b-2 border-amber-500">exponentially</u> cheaper long before railroads. Furthermore, building transcontinental rail infrastructure across flat Midwest terrain was far simpler and cheaper.</p>
+                    <p>In contrast, Latin America faced severe geographical barriers. Tropical climates, dense Amazonian rainforests, and daunting mountain ranges like the Andes isolated regional domestic markets from one another. Transporting goods from interior mines or plantations to ports required exorbitant capital investments. Consequently, Latin American countries often developed "hub-and-spoke" transport networks meant solely to export raw commodities abroad, rather than unifying national domestic consumer markets.</p>
+                    <p>This infrastructure divide reinforced economic specializations. The United States developed a robust internal manufacturing sector supported by high protective tariffs and a unified national market. Meanwhile, Latin American nations relied overwhelmingly on raw commodity exports—such as sugar, coffee, copper, and guano—making their economies hyper-vulnerable to volatile international market boom-and-bust cycles.</p>
+                </div>
+            </article>
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 3: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part3" class="space-y-6"></div>
+            </section>
+        </div>
+
+        <!-- PART 4 -->
+        <div id="part4" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 4 学習画面】</span>
+                <button onclick="printPart(4)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">🖨️ Part 4 のみ単独印刷</button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-blue-900 border-l-4 border-blue-600 pl-3 mb-3">Part 4: Conclusion: The Resource Curse and the Modern Legacy</h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>The economic trajectories of the United States and Latin America offer a classic illustration of the "Resource Curse" or Paradox of Plenty. Initial abundance in natural wealth—such as silver in Potosí or sugar plantations in Brazil—fostered predatory institutions that stifled broad innovation and democratic governance. When economic power remains concentrated among elite primary-commodity exporters, governments have little incentive to invest in human capital, industrial technology, or public infrastructure.</p>
+                    <p>In the 20th century, these historical inequalities were compounded by geopolitical interventions, debt crises, and political turmoil. Foreign interference, including U.S. military and economic interventions during the Cold War, often stabilized corrupt authoritarian regimes in Latin America at the expense of popular democratic reform. Meanwhile, industrial output and technological breakthroughs anchored North America's status as a global financial titan.</p>
+                    <p>In conclusion, the divergence between the U.S. and Latin America was neither accidental nor determined purely by geography or culture. It was shaped over centuries by colonial extraction versus settler institution-building, equal versus unequal land distribution, and inclusive legal protections versus extractive oligarchies. Understanding this legacy provides vital lessons for developing nations today: true long-term prosperity depends not on natural wealth under the soil, but on inclusive institutions, education, and human potential.</p>
+                </div>
+            </article>
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-blue-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 4: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part4" class="space-y-6"></div>
+            </section>
+        </div>
+
+        <!-- PART 5: ESSAY GRADER -->
+        <div id="part5" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+                <h3 class="text-xl font-bold text-blue-900 mb-2">✍️ Part 5: 論述採点 ＆ AI診断プロンプト生成ルーム</h3>
+                <p class="text-sm text-slate-600 mb-6">
+                    Part 1〜4の各論述問題を選択し、英語で回答（単語数目安: 60〜90語）を入力してください。<br>
+                    【5点満点の厳格な減点ルール】に従って自動判定し、さらにAI用の詳細採点プロンプトを生成します。
+                </p>
+
+                <!-- ルールカード -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 mb-6 text-xs text-slate-700 space-y-1">
+                    <p class="font-bold text-slate-900 text-sm mb-1">⚖️ 採点ルール（持ち点5点満点）:</p>
+                    <p>• <strong>内容の誤り:</strong> 史実・経済理論と異なる場合は <strong class="text-rose-600">0点</strong></p>
+                    <p>• <strong>単語数チェック (目標 60〜90語):</strong> 60語未満は <strong class="text-rose-600">-2点減点</strong> / 100語超過は <strong class="text-rose-600">-1点減点</strong></p>
+                    <p>• <strong>キーワード検証:</strong> 関連する歴史・経済キーワードが含まれていない場合は <strong class="text-rose-600">-1点減点</strong></p>
+                    <p>• <strong>丸コピーチェック:</strong> 本文の長文フレーズそのまま転記が疑われる場合は <strong class="text-rose-600">-1点減点</strong></p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-blue-900 mb-2">1. 採点・回答したい論述タスクを選択:</label>
+                        <select id="essaySelect" onchange="changeTask()" class="w-full p-2.5 border border-slate-300 rounded-lg text-sm bg-white font-semibold text-slate-800 focus:ring-2 focus:ring-blue-500">
+                            <option value="1">Task 1 (Part 1): Colonial economic models (Spanish vs British)</option>
+                            <option value="2">Task 2 (Part 2): Institutions, land distribution, and public education</option>
+                            <option value="3">Task 3 (Part 3): Geographical factors and industrial infrastructure</option>
+                            <option value="4">Task 4 (Part 4): The Resource Curse and long-term economic prosperity</option>
+                        </select>
+                    </div>
+
+                    <div id="taskPromptDisplay" class="bg-blue-50 p-3.5 rounded-lg border border-blue-200 text-xs text-blue-950 font-medium"></div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">2. あなたの回答 (English):</label>
+                        <textarea id="essayInput" rows="5" oninput="updateWordCount()" class="w-full p-3 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Write your English essay response here..."></textarea>
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span id="charCount">Characters: 0</span>
+                            <span id="wordCount" class="font-bold text-blue-900">Words: 0 (Target: 60 - 90 words)</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <button onclick="gradeLocally()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition shadow">
+                            🎯 簡易自動採点（ルールチェック）
+                        </button>
+                        <button onclick="generateAIPrompt()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition shadow">
+                            🤖 AI診断プロンプト作成
+                        </button>
+                    </div>
+
+                    <!-- 簡易自動採点結果 -->
+                    <div id="localResult" class="hidden mt-4 p-4 rounded-lg bg-slate-100 border border-slate-300"></div>
+
+                    <!-- AI Prompt Generator & Result Paste Box -->
+                    <div id="aiPromptBox" class="hidden mt-4 p-5 rounded-lg bg-emerald-50 border border-emerald-200">
+                        <h4 class="font-bold text-emerald-950 text-sm mb-2">📋 AI診断用プロンプト（コピー用）</h4>
+                        <p class="text-xs text-emerald-800 mb-3">
+                            以下のプロンプトをコピーし、ChatGPTやGemini等の外部AIに貼り付けて実行してください。<br>
+                            返ってきた診断メッセージを下の入力ボックスに貼り付けると、アプリ上に綺麗に出力・レンダリングされます。
+                        </p>
+                        <textarea id="aiPromptText" rows="8" readonly class="w-full p-3 text-xs font-mono bg-white border border-emerald-300 rounded-lg mb-2"></textarea>
+                        <button onclick="copyPromptText()" class="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2 rounded shadow transition">
+                            📋 プロンプトをクリップボードにコピー
+                        </button>
+
+                        <div class="mt-5 pt-4 border-t border-emerald-200">
+                            <label class="block text-sm font-bold text-emerald-950 mb-1">📥 AIからの回答・診断テキストをペースト:</label>
+                            <textarea id="aiFeedbackInput" rows="5" class="w-full p-2.5 text-xs border border-emerald-300 rounded-lg bg-white" placeholder="AIが出力した評価・アドバイス・解答例をここにペースト..."></textarea>
+                            <button onclick="renderAIFeedback()" class="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-5 py-2 rounded transition shadow">
+                                ✨ アプリ上に綺麗に出力する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Output Card (Printable Target) -->
+            <div id="aiFeedbackRender" class="hidden p-6 rounded-xl bg-white border-2 border-blue-200 shadow-md mb-8">
+                <div class="flex justify-between items-center pb-3 border-b border-slate-200 mb-4 no-print">
+                    <h4 class="font-bold text-blue-950 text-base">🤖 AI採点・診断アドバイスシート</h4>
+                    <button onclick="printAIFeedbackOnly()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow flex items-center space-x-1">
+                        <span>🖨️</span>
+                        <span>A4サイズに綺麗に出力・印刷する</span>
+                    </button>
+                </div>
+                <div id="aiFeedbackContent" class="text-xs text-slate-900 whitespace-pre-wrap leading-relaxed font-sans"></div>
+            </div>
+        </div>
+
+        <!-- PART 6: VOCABULARY TEST -->
+        <div id="part6" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+                <div class="flex justify-between items-center mb-4 pb-2 border-b">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">📚 Part 6: Vocabulary Test (全20問)</h3>
+                        <p class="text-xs text-slate-500 mt-1">本文章（Part 1〜4）で使用されている重要語彙テスト</p>
+                    </div>
+                    <button onclick="printPart(6)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">🖨️ 単語テストのみ印刷</button>
+                </div>
+                <div id="vocabContainer" class="space-y-6"></div>
+            </div>
+        </div>
+
+        <!-- PART 7: LATIN AMERICA GEOGRAPHY (1)-(27) -->
+        <div id="part7" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+                <div class="flex justify-between items-center mb-4 pb-2 border-b">
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-900">🗺️ Part 7: ラテンアメリカ（中米・カリブ海・南米）地理番号クイズ (1)〜(27)</h3>
+                        <p class="text-xs text-slate-500 mt-1">地図画像上の番号 (1)〜(27) の位置を確認し、ランダムに出題される国に対応する番号を選んでください！</p>
+                    </div>
+                    <button onclick="printPart(7)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                        🖨️ 地理テスト問題用紙を印刷
+                    </button>
+                </div>
+
+                <!-- モード選択 -->
+                <div class="flex items-center space-x-4 mb-6 bg-slate-100 p-2 rounded-lg border border-slate-200">
+                    <span class="text-xs font-bold text-slate-700 pl-2">モード選択:</span>
+                    <button id="mode-study-btn" onclick="setGeoMode('study')" class="px-4 py-1.5 rounded-md text-xs font-bold bg-emerald-600 text-white transition shadow">
+                        🗺️ 学習モード (番号で国名・解説を確認)
+                    </button>
+                    <button id="mode-quiz-btn" onclick="setGeoMode('quiz')" class="px-4 py-1.5 rounded-md text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition">
+                        🎯 番号当てクイズモード (ランダム出題)
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <!-- 地図画像表示エリア -->
+                    <div class="md:col-span-6 bg-slate-100 p-2 rounded-xl border border-slate-300 flex justify-center items-center overflow-hidden shadow-inner min-h-[550px]">
+                        <img src="images/map-Carribean-Central-South-America.jpeg" onError="this.onerror=null; this.src='images/map-Carribean-Central-South-America.jpg';" alt="Latin America Map" class="w-full h-auto max-h-[650px] object-contain rounded-lg block mx-auto">
+                    </div>
+
+                    <!-- 情報・操作パネル -->
+                    <div class="md:col-span-6 flex flex-col justify-between space-y-4">
+                        
+                        <!-- 学習モード パネル -->
+                        <div id="study-panel" class="bg-emerald-50 p-5 rounded-xl border border-emerald-200">
+                            <span class="text-xs text-emerald-800 font-bold uppercase tracking-wider">🗺️ 番号学習ガイド</span>
+                            <h4 id="study-title" class="text-lg font-bold text-emerald-950 mt-1">下の番号(1)〜(27)ボタンを選択してください</h4>
+                            <p id="study-desc" class="text-xs text-emerald-800 leading-relaxed mt-2">
+                                番号を選ぶと、地図上のその番号の位置に対応する国名と、本動画の歴史・経済に関する解説が表示されます。
+                            </p>
+                        </div>
+
+                        <!-- クイズモード パネル -->
+                        <div id="quiz-panel" class="hidden bg-slate-100 p-5 rounded-xl border border-slate-300">
+                            <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">🎯 ランダム地理番号クイズ</span>
+                            <h4 id="geo-question" class="text-base font-bold text-slate-900 mt-1">問題読み込み中...</h4>
+                            <div id="geo-feedback" class="hidden mt-3 p-3 rounded-md text-xs font-bold border"></div>
+
+                            <div class="mt-4 pt-3 flex justify-between items-center text-xs text-slate-600 border-t">
+                                <span id="geo-score" class="font-bold">Score: 0 / 0</span>
+                                <button onclick="nextGeoQuestion()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3.5 py-1.5 rounded transition shadow">
+                                    次の問題へ ➔
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- (1)〜(27) の番号のみボタンリスト -->
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <h5 class="text-xs font-bold text-slate-700 mb-2">番号 (1) 〜 (27) を選択:</h5>
+                            <div id="numeric-buttons" class="grid grid-cols-4 sm:grid-cols-6 gap-2 max-h-[300px] overflow-y-auto pr-1"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== 印刷専用コンテナ ==================== -->
+        <div class="print-only-container">
+
+            <!-- Print Part 1 -->
+            <div id="print-page-1" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Did the U.S. Become Rich While Latin America Stayed Poor?</h1>
+                    <p class="text-[9pt] text-slate-700">Part 1 Worksheet: Colonial Foundations & Extraction</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>Three centuries ago, European observers would have scoffed at the notion that North America would outpace Latin America economically. Cities like Mexico City and Lima were dazzling urban metropolises enriched by vast deposits of silver and gold, whereas British outposts in North America were modest agrarian settlements. However, the root of today's stark wealth disparity lies precisely in these contrasting colonial beginnings.</p>
+                    <p>In Latin America, the Spanish Crown established an <u><b>extractive</b></u> economic model designed to funnel mineral wealth directly back to Europe. The Spanish conquest targeted densely populated indigenous empires, enabling colonizers to institute feudal systems like the <i>encomienda</i>. These mechanisms concentrated vast land holdings and silver mines in the hands of a small colonial elite who relied heavily on forced native and African slave labor. Consequently, early Latin American societies were built upon rigid socio-economic hierarchies and extreme inequality.</p>
+                    <p>In stark contrast, North American British colonies—particularly in the North—lacked abundant precious metals or vast native populations to enslave. Settlers were forced to clear land, farm, and establish self-sustaining communities. Because the return on capital could not be extracted effortlessly through forced labor, British authorities granted land titles to smallholder farmers and established local representative assemblies. This difference in early settlement patterns laid the groundwork for entirely different institutional trajectories.</p>
+                </div>
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-1"></ol>
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 1 (Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Contrast the early colonial economic models of Spanish Latin America and British North America.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 2 -->
+            <div id="print-page-2" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Did the U.S. Become Rich While Latin America Stayed Poor?</h1>
+                    <p class="text-[9pt] text-slate-700">Part 2 Worksheet: Institutions, Property Rights, and Education</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>As both regions transitioned toward independence in the late 18th and early 19th centuries, institutional differences became decisive. Economists Daron Acemoglu and James Robinson emphasize that inclusive economic and political institutions are the primary drivers of long-term national prosperity. In the United States, post-independence policy prioritized legal security, secure property rights, and the rule of law, encouraging widespread innovation and investment among ordinary citizens.</p>
+                    <p>A vital factor in North America's success was widespread land ownership and early investment in public education. Laws like the Homestead Act of 1862 distributed millions of acres of public land to small farmers, preventing land monopoly and creating a broad, politically empowered middle class. Furthermore, Northern states established universal basic education early on, creating a highly literate workforce capable of adopting complex technologies during the early Industrial Revolution.</p>
+                    <p>Conversely, independence in Latin America largely replaced Spanish officials with local landed oligarchs without reforming underlying social structures. Monopolistic land distribution persisted through giant estates (<i>haciendas</i>), leaving the vast majority of peasants landless and disenfranchised. Political instability, frequent military coups (<i>caudillismo</i>), and negligible investment in public education perpetuated widespread illiteracy and economic stagnation, leaving the region unprepared for industrialization.</p>
+                </div>
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-2"></ol>
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 2 (Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Explain how property rights, land distribution, and public education contributed to the economic growth of the U.S. compared to Latin America.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 3 -->
+            <div id="print-page-3" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Did the U.S. Become Rich While Latin America Stayed Poor?</h1>
+                    <p class="text-[9pt] text-slate-700">Part 3 Worksheet: Industrialization, Infrastructure, and Geography</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>The 19th-century Industrial Revolution reshaped global power dynamics, and geography played a profound, often overlooked role. The continental United States possessed an extraordinary geographical advantage: vast expanses of fertile, temperate plains interconnected by navigable river networks like the Mississippi. River transport made moving agricultural goods and coal <u><b>exponentially</b></u> cheaper long before railroads. Furthermore, building transcontinental rail infrastructure across flat Midwest terrain was far simpler and cheaper.</p>
+                    <p>In contrast, Latin America faced severe geographical barriers. Tropical climates, dense Amazonian rainforests, and daunting mountain ranges like the Andes isolated regional domestic markets from one another. Transporting goods from interior mines or plantations to ports required exorbitant capital investments. Consequently, Latin American countries often developed "hub-and-spoke" transport networks meant solely to export raw commodities abroad, rather than unifying national domestic consumer markets.</p>
+                    <p>This infrastructure divide reinforced economic specializations. The United States developed a robust internal manufacturing sector supported by high protective tariffs and a unified national market. Meanwhile, Latin American nations relied overwhelmingly on raw commodity exports—such as sugar, coffee, copper, and guano—making their economies hyper-vulnerable to volatile international market boom-and-bust cycles.</p>
+                </div>
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-3"></ol>
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 3 (Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Discuss how geographical factors and infrastructure development influenced industrialization in North America versus Latin America.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 4 -->
+            <div id="print-page-4" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Why Did the U.S. Become Rich While Latin America Stayed Poor?</h1>
+                    <p class="text-[9pt] text-slate-700">Part 4 Worksheet: Conclusion: The Resource Curse and Modern Legacy</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>The economic trajectories of the United States and Latin America offer a classic illustration of the "Resource Curse" or Paradox of Plenty. Initial abundance in natural wealth—such as silver in Potosí or sugar plantations in Brazil—fostered predatory institutions that stifled broad innovation and democratic governance. When economic power remains concentrated among elite primary-commodity exporters, governments have little incentive to invest in human capital, industrial technology, or public infrastructure.</p>
+                    <p>In the 20th century, these historical inequalities were compounded by geopolitical interventions, debt crises, and political turmoil. Foreign interference, including U.S. military and economic interventions during the Cold War, often stabilized corrupt authoritarian regimes in Latin America at the expense of popular democratic reform. Meanwhile, industrial output and technological breakthroughs anchored North America's status as a global financial titan.</p>
+                    <p>In conclusion, the divergence between the U.S. and Latin America was neither accidental nor determined purely by geography or culture. It was shaped over centuries by colonial extraction versus settler institution-building, equal versus unequal land distribution, and inclusive legal protections versus extractive oligarchies. Understanding this legacy provides vital lessons for developing nations today: true long-term prosperity depends not on natural wealth under the soil, but on inclusive institutions, education, and human potential.</p>
+                </div>
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-4"></ol>
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 4 (Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Summarize why natural resource wealth alone did not guarantee long-term economic prosperity in Latin America.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 6 -->
+            <div id="print-page-6" class="print-target">
+                <div class="border-b pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Vocabulary Test Worksheet</h1>
+                    <p class="text-[8.5pt] text-slate-600">Part 6: Key Economic & Historical Vocabulary Test (20 Questions)</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Score: ____ / 20</span>
+                    </div>
+                </div>
+                <div class="space-y-2 text-[8.5pt]" id="print-vocab-list"></div>
+            </div>
+
+            <!-- Print Part 7 -->
+            <div id="print-page-7" class="print-target">
+                <h1 class="text-base font-bold text-center">Latin America Geography Worksheet</h1>
+                <p class="text-center text-xs mb-3">Match Numbers (1)-(27) on the Map with Correct Country Names</p>
+                <div class="text-center mb-3">
+                    <img src="images/map-Carribean-Central-South-America.jpeg" class="max-w-[380px] mx-auto border">
+                </div>
+                <div class="grid grid-cols-3 gap-x-4 gap-y-1 text-[8pt]">
+                    <div>(1) _______________________</div>
+                    <div>(10) ______________________</div>
+                    <div>(19) ______________________</div>
+                    <div>(2) _______________________</div>
+                    <div>(11) ______________________</div>
+                    <div>(20) ______________________</div>
+                    <div>(3) _______________________</div>
+                    <div>(12) ______________________</div>
+                    <div>(21) ______________________</div>
+                    <div>(4) _______________________</div>
+                    <div>(13) ______________________</div>
+                    <div>(22) ______________________</div>
+                    <div>(5) _______________________</div>
+                    <div>(14) ______________________</div>
+                    <div>(23) ______________________</div>
+                    <div>(6) _______________________</div>
+                    <div>(15) ______________________</div>
+                    <div>(24) ______________________</div>
+                    <div>(7) _______________________</div>
+                    <div>(16) ______________________</div>
+                    <div>(25) ______________________</div>
+                    <div>(8) _______________________</div>
+                    <div>(17) ______________________</div>
+                    <div>(26) ______________________</div>
+                    <div>(9) _______________________</div>
+                    <div>(18) ______________________</div>
+                    <div>(27) ______________________</div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        const taskPrompts = {
+            1: "Contrast the early colonial economic models of Spanish Latin America and British North America.",
+            2: "Explain how property rights, land distribution, and public education contributed to the economic growth of the U.S. compared to Latin America.",
+            3: "Discuss how geographical factors and infrastructure development influenced industrialization in North America versus Latin America.",
+            4: "Summarize why natural resource wealth alone did not guarantee long-term economic prosperity in Latin America."
+        };
+
+        const mcqData = {
+            1: [
+                { q: "Why would 18th-century European observers have considered Latin America wealthier than North America?", options: ["Because North America was involved in constant wars", "Because Latin America produced high-tech manufactured goods", "Because Latin America possessed rich cities funded by gold and silver deposits", "Because British colonies had no agriculture"], correct: 2, exp: "正解: (C) メキシコシティやリマなどの大都市が金銀の鉱山によって潤っていたためです。" },
+                { q: "What characterized the Spanish colonial economic model in Latin America?", options: ["Extractive systems designed to funnel mineral wealth directly to Europe", "A complete ban on slave labor", "Broad distribution of small farmland to native peasants", "Strict encouragement of local industrial manufacturing"], correct: 0, exp: "正解: (A) 資源をヨーロッパ本国へ汲み出す掠奪・抽出型（extractive）モデルでした。" },
+                { q: "Why did British settlers in North America set up self-sustaining farming communities?", options: ["They were prohibited from returning to Europe", "They wanted to create feudal empires", "They received gold subsidies from the King", "The region lacked immediate precious metals or large populations to enslave"], correct: 3, exp: "正解: (D) 奪える金銀や奴隷化できる大規模先住民が存在しなかったため、自ら開墾する必要がありました。" },
+                { q: "The term 'encomienda' in Paragraph 2 refers to a colonial system that:", options: ["Abolished African slavery in the 16th century", "Forced native populations to work for colonial elites on large estates and mines", "Promoted free trade with rival European nations", "Granted full democratic voting rights to native inhabitants"], correct: 1, exp: "正解: (B) 先住民を特定の植民者に割り当て、強制労働を強いた制度です。" },
+                { q: "The underlined word 'extractive' in Paragraph 2 is closest in meaning to:", options: ["Highly fair and democratic", "Designed to draw out wealth for external benefit", "Focused on environmental preservation", "Temporary and unauthorized"], correct: 1, exp: "正解: (B) 利益や資源を外へ汲み出す・抽出する性質を意味します。" }
+            ],
+            2: [
+                { q: "According to Daron Acemoglu and James Robinson, what is the main driver of long-term economic prosperity?", options: ["Tropical climate and natural gold reserves", "Massive military spending", "Inclusive economic and political institutions", "Monopolistic state control"], correct: 2, exp: "正解: (C) 包摂的（inclusive）な政治・経済制度が長期的繁栄の主因とされています。" },
+                { q: "How did the Homestead Act of 1862 influence U.S. society?", options: ["It banned all private property rights", "It distributed land to small farmers, creating a broad middle class", "It concentrated all farmland into state monopolies", "It encouraged feudal haciendas"], correct: 1, exp: "正解: (B) 小規模農家に土地を無償近くで分配し、分厚い中産階級を形成しました。" },
+                { q: "Why was Latin America unprepared for industrialization after independence?", options: ["Peasants refused to work in factories", "All foreign trade was completely banned by law", "Railroads were built too quickly", "Landed oligarchs maintained monopoly over land and ignored public education"], correct: 3, exp: "正解: (D) 土地の独占（hacienda）が続き、民衆への教育投資が著しく遅れたためです。" },
+                { q: "What was a major consequence of 'caudillismo' in Latin America?", options: ["Frequent military coups and political instability", "Rapid expansion of universal basic education", "Long-term democratic stability", "Equal wealth distribution among citizens"], correct: 0, exp: "正解: (A) 軍事独裁者や軍閥による政治介入と政治的混乱をもたらしました。" },
+                { q: "The word 'disenfranchised' in Paragraph 3 is closest in meaning to:", options: ["Richly rewarded", "Highly educated", "Deprived of political rights or power", "Legally protected"], correct: 2, exp: "正解: (C) 政治的権利や参政権を奪われた状態を意味します。" }
+            ],
+            3: [
+                { q: "What natural geographical feature provided the U.S. with a massive transportation advantage?", options: ["Dense Amazonian rainforests", "The Andes Mountain range", "Extensive desert highways", "Navigable river networks like the Mississippi"], correct: 3, exp: "正解: (D) ミシシッピ川などの平坦で航行可能な大水運網が物流コストを劇的に下げました。" },
+                { q: "Why were Latin American transport networks constructed in a 'hub-and-spoke' pattern?", options: ["To connect internal cities for domestic consumer trade", "To export raw commodities abroad from interior mines to ports", "To encourage public railway passenger travel", "To unite North and South America"], correct: 1, exp: "正解: (B) 国内市場の統合ではなく、奥地の鉱山や農園から港へ資源を港から輸出するためだけに建設されました。" },
+                { q: "How did geography affect railway construction in North America vs. Latin America?", options: ["Building across Midwestern plains was far cheaper than across the Andes or rainforests", "Latin America had flatter terrain everywhere", "Railroads were impossible to build in North America", "Mountain ranges accelerated industrial growth"], correct: 0, exp: "正解: (A) 北米平原部は安価に敷設できましたが、アンデス山脈や熱帯雨林の建設には膨大なコストがかかりました。" },
+                { q: "Why were Latin American economies hyper-vulnerable to international market fluctuations?", options: ["Because they produced too many high-tech goods", "Because they had no foreign trading partners", "Because they relied overwhelmingly on single raw commodity exports", "Because their currencies were gold-backed"], correct: 2, exp: "正解: (C) 砂糖、コーヒー、銅などの単一一次産品輸出に過度に依存していたためです。" },
+                { q: "The underlined word 'exponentially' in Paragraph 1 is closest in meaning to:", options: ["Gradually and slowly", "At an increasingly rapid rate", "Unnoticeably", "Negatively"], correct: 1, exp: "正解: (B) 飛躍的に、加速度的にという意味です。" }
+            ],
+            4: [
+                { q: "What is the core concept of the 'Resource Curse' or Paradox of Plenty?", options: ["Countries with gold always become stable democracies", "Abundant natural wealth can foster corrupt institutions that stifle broader development", "Resource-poor nations never survive historically", "Mining silver guarantees zero national debt"], correct: 1, exp: "正解: (B) 豊富な資源がかえって掠奪的制度を生み、産業育成や民主化を阻害する現象です。" },
+                { q: "Why do resource-rich oligarchies often fail to invest in public education?", options: ["Because schools are illegal in resource-rich nations", "Because primary commodity extraction requires little skilled labor or technological innovation", "Because foreign powers ban literacy", "Because peasants refuse to attend school"], correct: 1, exp: "正解: (B) 資源抽出だけに依存するエリート層には、高度な教育や技術革新に投資するインセンティブがないためです。" },
+                { q: "How did Cold War geopolitical interventions impact Latin America?", options: ["They eliminated all foreign national debts", "They built universal public schools", "They often backed authoritarian regimes that suppressed democratic reforms", "They united the continent under one president"], correct: 2, exp: "正解: (C) 冷戦期、米国の介入等により民主的改革が抑圧され独裁政権が維持されることがありました。" },
+                { q: "What is the author's primary conclusion regarding national prosperity?", options: ["It depends purely on latitude and tropical weather", "It requires complete isolation from global trade", "It depends on military conquest", "It depends on inclusive institutions, education, and human potential rather than raw minerals"], correct: 3, exp: "正解: (D) 長期的繁栄は地下資源ではなく、包摂的制度や教育、人的資源によって定まるという点です。" },
+                { q: "The word 'stifled' in Paragraph 1 is closest in meaning to:", options: ["Suppressed or prevented from developing", "Encouraged warmly", "Financed heavily", "Expanded rapidly"], correct: 0, exp: "正解: (A) 抑圧した、発展を阻害したという意味です。" }
+            ]
+        };
+
+        const vocabQuizData = [
+            { w: "Divergence", d: "The process of separating or becoming different.", options: ["分岐・格差の拡大", "急速な統合", "金融緩和", "軍事協定"], c: 0 },
+            { w: "Extractive", d: "Involving the removal of natural resources without reinvestment.", options: ["環境保護的な", "自立発展型の", "抽出型の・掠奪的な", "平和維持の"], c: 2 },
+            { w: "Agrarian", d: "Relating to cultivated land or landed property.", options: ["最先端工業の", "農耕の・土地の", "海洋貿易の", "金融中心の"], c: 1 },
+            { w: "Oligarchy", d: "A small group of people having control of a country.", options: ["完全直接民主制", "立憲君主制", "無政府状態", "寡頭政治・少数の支配層"], c: 3 },
+            { w: "Disenfranchised", d: "Deprived of the right to vote or political power.", options: ["公民権・参政権を奪われた", "高額所得を得た", "世襲特権を持つ", "不当逮捕された"], c: 0 },
+            { w: "Prosperity", d: "The state of being prosperous and successful.", options: ["深刻なハイパーインフレ", "国家破産", "繁栄・成功", "政情不安"], c: 2 },
+            { w: "Homestead", d: "A dwelling house and the land given to settlers.", options: ["大型軍事拠点", "入植地・自営農地", "奴隷用宿舎", "王室所有地"], c: 1 },
+            { w: "Monopoly", d: "The exclusive possession or control of trade.", options: ["完全自由競合", "協同連帯組織", "独占・専売", "関税完全撤廃"], c: 2 },
+            { w: "Navigable", d: "Deep and wide enough to afford passage to ships.", options: ["（船が）航行可能な", "水深の浅い", "凍結した", "流れが激しい"], c: 0 },
+            { w: "Exorbitant", d: "Unreasonably high or unreasonable in cost.", options: ["市場最安値の", "法外な・非常に高価な", "平均的な", "免除された"], c: 1 },
+            { w: "Vulnerable", d: "Susceptible to physical or emotional harm.", options: ["難攻不落の", "自給自足の", "完全自動化された", "脆弱な・影響を受けやすい"], c: 3 },
+            { w: "Trajectory", d: "The path followed by historical development.", options: ["軌跡・発展の辿る道筋", "一時的障害", "暴落・急降下", "最終終着駅"], c: 0 },
+            { w: "Stagnation", d: "Lack of activity, growth, or development.", options: ["爆発的成長", "停滞・沈滞", "技術的革新", "構造的変革"], c: 1 },
+            { w: "Predatory", d: "Seeking to exploit others for personal gain.", options: ["相互扶助の", "環境配慮の", "掠奪的な・剥削的な", "伝統奉仕の"], c: 2 },
+            { w: "Hierarchy", d: "A system in which members are ranked.", options: ["身分階層・ヒエラルキー", "水平的平等主義", "技術的イノベーション", "急激な都市化"], c: 0 },
+            { w: "Compound", d: "Make something bad worse; combine.", options: ["大幅に軽減する", "完全に分離する", "悪化させる・重なる", "意図的に無視する"], c: 2 },
+            { w: "Disparity", d: "A great difference or inequality.", options: ["酷似・同調", "格差・不均衡", "国際連帯", "好景気循環"], c: 1 },
+            { w: "Incentive", d: "A thing that motivates or encourages someone.", options: ["法的制約", "厳しい罰則", "税金義務", "動機・インセンティブ"], c: 3 },
+            { w: "Volatile", d: "Liable to change rapidly and unpredictably.", options: ["長期安定的な", "（情勢・価格が）変動しやすい・不安定な", "緩やかに上昇する", "持続可能な"], c: 1 },
+            { w: "Paradox", d: "A seemingly absurd or self-contradictory statement.", options: ["科学的証明", "明快な直球解答", "パラドックス・逆説", "歴史的必然性"], c: 2 }
+        ];
+
+        const geoLatAmData = {
+            1: { name: "Mexico (メキシコ)", desc: "アステカ帝国の中心地。スペイン colonial 時代に大規模な銀鉱山を有した資源抽出拠点。" },
+            2: { name: "Guatemala (グアテマラ)", desc: "マヤ文明の遺産が息づく中米の国。大農園（バナナ・コーヒー）輸出の歴史を持ちます。" },
+            3: { name: "Belize (ベリーズ)", desc: "中米で唯一の英語公用語国（旧イギリス領ベリーズ）。" },
+            4: { name: "El Salvador (エルサルバドル)", desc: "太平洋に面する中米最小の国。" },
+            5: { name: "Honduras (ホンジュラス)", desc: "中米の中央に位置する国。" },
+            6: { name: "Nicaragua (ニカラグア)", desc: "中米最大の面積を持つ国。" },
+            7: { name: "Costa Rica (コスタリカ)", desc: "早くから教育優先政策と軍隊廃止を行い、安定した民主主義を達成した中米の国。" },
+            8: { name: "Panama (パナマ)", desc: "太平洋と大西洋を結ぶパナマ運河を有し、世界物流の要衝。" },
+            9: { name: "Cuba (キューバ)", desc: "カリブ海最大の島国。砂糖プランテーションとアフリカ系奴隷労働の中心地でした。" },
+            10: { name: "Bahamas (バハマ)", desc: "フロリダ沖に浮かぶ多数の島々からなる国。" },
+            11: { name: "Jamaica (ジャマイカ)", desc: "カリブ海の英語圏島国。旧イギリス領の砂糖農園拠点。" },
+            12: { name: "Haiti (ハイチ)", desc: "世界初の黒人主導の独立共和国（1804年）となったヒスパニオラ島西部の国。" },
+            13: { name: "Dominican Republic (ドミニカ共和国)", desc: "ヒスパニオラ島東部に位置する国。" },
+            14: { name: "Puerto Rico (プエルトリコ)", desc: "コモンウェルス（米国自治連邦区）となっているカリブ海の島。" },
+            15: { name: "Colombia (コロンビア)", desc: "南米北西部の国。コーヒーやエメラルド、鉱物資源の輸出歴史を持ちます。" },
+            16: { name: "Venezuela (ベネズエラ)", desc: "世界最大の石油埋蔵量を誇るが、単一資源依存による「資源の呪い」の典型例とされる国。" },
+            17: { name: "Ecuador (エクアドル)", desc: "赤道直下に位置する南米の国（ガラパゴス諸島を擁する）。" },
+            18: { name: "Peru (ペルー)", desc: "インカ帝国の中心地。アンデス山脈の厳しい地勢とポトシと並ぶ鉱物抽出の歴史。" },
+            19: { name: "Bolivia (ボリビア)", desc: "かつて世界最大の銀鉱山「ポトシ」を擁し、スペイン本国へ巨額の富を供給した内陸国。" },
+            20: { name: "Chile (チリ)", desc: "太平洋沿岸に南北5000kmにわたって細長く伸びる国。世界最大の銅生産国。" },
+            21: { name: "Argentina (アルゼンチン)", desc: "パンパ（大平原）での農畜産物輸出で20世紀初頭には世界有数の富裕国となった国。" },
+            22: { name: "Paraguay (パラグアイ)", desc: "南米内陸に位置する国。" },
+            23: { name: "Uruguay (ウルグアイ)", desc: "アルゼンチンとブラジルに挟まれた南米の小国。高い生活水準と安定した制度を保持。" },
+            24: { name: "Brazil (ブラジル)", desc: "南米最大の面積と人口を持つ国。大規模な砂糖・コーヒー農園と長年の奴隷労働の歴史。" },
+            25: { name: "Guyana (ガイアナ)", desc: "南米北部の旧イギリス領国家。" },
+            26: { name: "Suriname (スリナム)", desc: "南米北部の旧オランダ領国家。" },
+            27: { name: "French Guiana (フランス領ギアナ)", desc: "フランスの海外県となっている南米北東部の地域。" }
+        };
+
+        let geoQuizOrder = [];
+        let currentGeoIdx = 0, geoScore = 0, geoMode = 'study';
+
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function showTab(id) {
+            document.querySelectorAll('.tab-content').forEach(e => e.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(e => {
+                e.classList.remove('border-blue-600', 'text-blue-600', 'font-bold');
+                e.classList.add('border-transparent', 'text-slate-500');
+            });
+            document.getElementById(id).classList.remove('hidden');
+            const btn = document.getElementById('tab-' + id);
+            if (btn) {
+                btn.classList.add('border-blue-600', 'text-blue-600', 'font-bold');
+                btn.classList.remove('border-transparent', 'text-slate-500');
+            }
+        }
+
+        function setGeoMode(mode) {
+            geoMode = mode;
+            const studyBtn = document.getElementById('mode-study-btn');
+            const quizBtn = document.getElementById('mode-quiz-btn');
+            document.getElementById('study-panel').classList.toggle('hidden', mode !== 'study');
+            document.getElementById('quiz-panel').classList.toggle('hidden', mode === 'study');
+
+            if (mode === 'study') {
+                studyBtn.className = "px-4 py-1.5 rounded-md text-xs font-bold bg-emerald-600 text-white transition shadow";
+                quizBtn.className = "px-4 py-1.5 rounded-md text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition";
+            } else {
+                quizBtn.className = "px-4 py-1.5 rounded-md text-xs font-bold bg-emerald-600 text-white transition shadow";
+                studyBtn.className = "px-4 py-1.5 rounded-md text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition";
+                
+                geoQuizOrder = shuffleArray(Array.from({length: 27}, (_, i) => i + 1));
+                currentGeoIdx = 0; 
+                geoScore = 0; 
+                loadQuizQuestion();
+            }
+        }
+
+        function selectGeoNum(num) {
+            if (geoMode === 'study') {
+                const data = geoLatAmData[num];
+                document.getElementById('study-title').textContent = `(${num}) ${data.name}`;
+                document.getElementById('study-desc').textContent = data.desc;
+            } else {
+                answerQuiz(num);
+            }
+        }
+
+        function loadQuizQuestion() {
+            if (currentGeoIdx >= geoQuizOrder.length) {
+                document.getElementById('geo-question').textContent = "🎉 全27問完了！お疲れ様でした。";
+                document.getElementById('geo-feedback').className = "mt-3 p-3 rounded-md text-xs font-bold bg-emerald-100 border-emerald-300 text-emerald-900";
+                document.getElementById('geo-feedback').textContent = `最終結果: ${geoScore} / 27 正解`;
+                document.getElementById('geo-feedback').classList.remove('hidden');
+                return;
+            }
+            const targetNum = geoQuizOrder[currentGeoIdx];
+            document.getElementById('geo-question').textContent = `Q${currentGeoIdx + 1}: 「${geoLatAmData[targetNum].name}」に対応する番号 (1)〜(27) を地図から選択してください。`;
+            document.getElementById('geo-feedback').classList.add('hidden');
+            document.getElementById('geo-score').textContent = `Score: ${geoScore} / ${geoQuizOrder.length}`;
+        }
+
+        function answerQuiz(selectedNum) {
+            if (currentGeoIdx >= geoQuizOrder.length) return;
+            const targetNum = geoQuizOrder[currentGeoIdx];
+            const fb = document.getElementById('geo-feedback');
+            fb.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-900', 'border-emerald-200', 'bg-rose-50', 'text-rose-900', 'border-rose-200');
+
+            if (selectedNum === targetNum) {
+                geoScore++;
+                fb.classList.add('bg-emerald-50', 'text-emerald-900', 'border-emerald-200');
+                fb.textContent = `✓ 正解！ (${targetNum}) は ${geoLatAmData[targetNum].name} です。`;
+            } else {
+                fb.classList.add('bg-rose-50', 'text-rose-900', 'border-rose-200');
+                fb.textContent = `✗ 不正解。正解は (${targetNum}) ${geoLatAmData[targetNum].name} です。`;
+            }
+            document.getElementById('geo-score').textContent = `Score: ${geoScore} / ${geoQuizOrder.length}`;
+        }
+
+        function nextGeoQuestion() {
+            if (currentGeoIdx < geoQuizOrder.length) { currentGeoIdx++; loadQuizQuestion(); }
+        }
+
+        function renderNumericButtons() {
+            const container = document.getElementById('numeric-buttons');
+            container.innerHTML = '';
+            for (let i = 1; i <= 27; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'bg-slate-50 hover:bg-emerald-100 border border-slate-300 p-2 rounded text-xs font-bold text-slate-800 text-center transition shadow-sm hover:border-emerald-500';
+                btn.textContent = `(${i})`;
+                btn.onclick = () => selectGeoNum(i);
+                container.appendChild(btn);
+            }
+        }
+
+        function renderMCQs() {
+            [1, 2, 3, 4].forEach(partNum => {
+                const container = document.getElementById(`mcq-part${partNum}`);
+                const printContainer = document.getElementById(`print-mcq-${partNum}`);
+                if (!container) return;
+                
+                container.innerHTML = '';
+                if (printContainer) printContainer.innerHTML = '';
+
+                mcqData[partNum].forEach((qObj, idx) => {
+                    const div = document.createElement('div');
+                    div.className = 'bg-white p-4 rounded-lg border border-slate-200 shadow-sm';
+                    div.innerHTML = `
+                        <p class="font-bold text-slate-800 text-sm mb-3">${idx + 1}. ${qObj.q}</p>
+                        <div class="space-y-2 text-xs">
+                            ${qObj.options.map((opt, oIdx) => `
+                                <label class="flex items-start p-2 rounded hover:bg-slate-50 cursor-pointer border border-transparent hover:border-slate-200">
+                                    <input type="radio" name="p${partNum}_q${idx}" value="${oIdx}" onclick="checkMCQ(${partNum}, ${idx},${oIdx})" class="mt-0.5 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-slate-700 font-medium">(${String.fromCharCode(65+oIdx)})${opt}</span>
+                                </label>
+                            `).join('')}
+                        </div>
+                        <div id="fb_p${partNum}_q${idx}" class="hidden mt-3 p-3 text-xs rounded-md"></div>
+                    `;
+                    container.appendChild(div);
+
+                    if (printContainer) {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <strong>${qObj.q}</strong>
+                            <div class="grid grid-cols-2 gap-x-2 gap-y-0.5 mt-0.5 text-[8pt]">
+                                ${qObj.options.map((opt, oIdx) => `<div>(${String.fromCharCode(65+oIdx)})${opt}</div>`).join('')}
+                            </div>
+                        `;
+                        printContainer.appendChild(li);
+                    }
+                });
+            });
+        }
+
+        function checkMCQ(partNum, qIdx, selectedIdx) {
+            const qObj = mcqData[partNum][qIdx];
+            const fb = document.getElementById(`fb_p${partNum}_q${qIdx}`);
+            fb.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-900', 'border-emerald-200', 'bg-rose-50', 'text-rose-900', 'border-rose-200');
+            fb.classList.add('border');
+            if (selectedIdx === qObj.correct) {
+                fb.classList.add('bg-emerald-50', 'text-emerald-900', 'border-emerald-200');
+                fb.innerHTML = `<strong>✓ 正解！</strong> ${qObj.exp}`;
+            } else {
+                fb.classList.add('bg-rose-50', 'text-rose-900', 'border-rose-200');
+                fb.innerHTML = `<strong>✗ 不正解</strong> ${qObj.exp}`;
+            }
+        }
+
+        function renderVocab() {
+            const container = document.getElementById('vocabContainer');
+            const printVocab = document.getElementById('print-vocab-list');
+            if (!container) return;
+
+            container.innerHTML = '';
+            if (printVocab) printVocab.innerHTML = '';
+
+            vocabQuizData.forEach((v, idx) => {
+                const card = document.createElement('div');
+                card.className = 'bg-slate-50 p-4 rounded-lg border border-slate-200';
+                card.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-blue-900 text-base">${idx+1}. ${v.w}</span>
+                        <span class="text-xs text-slate-500 italic font-serif">${v.d}</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        ${v.options.map((opt, oIdx) => `
+                            <button onclick="checkVocab(${idx}, ${oIdx})" class="text-left p-2 bg-white border rounded text-xs hover:bg-blue-50 transition font-medium">
+                                (${String.fromCharCode(65+oIdx)})${opt}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="v-fb-${idx}" class="hidden mt-2 text-xs font-bold"></div>
+                `;
+                container.appendChild(card);
+
+                if (printVocab) {
+                    const div = document.createElement('div');
+                    div.className = 'border p-1.5 rounded mb-1';
+                    div.innerHTML = `
+                        <div class="font-bold text-[8.5pt] mb-0.5">${idx+1}. <span class="text-blue-950 font-serif">${v.w}</span> <span class="text-[7.5pt] font-normal text-slate-600">(${v.d})</span></div>
+                        <div class="grid grid-cols-4 gap-1 text-[7.5pt]">
+                            ${v.options.map((opt, oIdx) => `<div>(${String.fromCharCode(65+oIdx)})${opt}</div>`).join('')}
+                        </div>
+                    `;
+                    printVocab.appendChild(div);
+                }
+            });
+        }
+
+        function checkVocab(vIdx, selectedOpt) {
+            const item = vocabQuizData[vIdx];
+            const fb = document.getElementById(`v-fb-${vIdx}`);
+            fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+            if (selectedOpt === item.c) {
+                fb.classList.add('text-emerald-600');
+                fb.textContent = "✓ 正解！ " + item.w + " = " + item.options[item.c];
+            } else {
+                fb.classList.add('text-rose-600');
+                fb.textContent = "✗ 不正解。正解は (" + String.fromCharCode(65+item.c) + ") " + item.options[item.c];
+            }
+        }
+
+        function changeTask() {
+            const taskId = document.getElementById('essaySelect').value;
+            document.getElementById('taskPromptDisplay').innerHTML = `<strong>Task ${taskId}:</strong> ${taskPrompts[taskId]}`;
+        }
+
+        function updateWordCount() {
+            const text = document.getElementById('essayInput').value;
+            const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+            document.getElementById('charCount').textContent = `Characters: ${text.length}`;
+            document.getElementById('wordCount').textContent = `Words: ${wordCount} (Target: 60 - 90 words)`;
+        }
+
+        function gradeLocally() {
+            const text = document.getElementById('essayInput').value.trim();
+            const resDiv = document.getElementById('localResult');
+            resDiv.classList.remove('hidden');
+
+            if (!text) {
+                resDiv.innerHTML = `<p class="text-rose-600 text-xs font-bold">回答が入力されていません。英文を入力してください。</p>`;
+                return;
+            }
+
+            let score = 5;
+            let deductions = [];
+            const wordCount = text.trim().split(/\s+/).length;
+
+            if (wordCount < 60) {
+                score -= 2;
+                deductions.push(`単語数不足: 現在 ${wordCount} 語 (60語未満のため -2点減点)`);
+            } else if (wordCount > 100) {
+                score -= 1;
+                deductions.push(`単語数超過: 現在 ${wordCount} 語 (100語超過のため -1点減点)`);
+            }
+
+            const keyWords = ["colonial", "institution", "property", "education", "extractive", "resource", "geography", "land", "infrastructure"];
+            const hasKeyword = keyWords.some(kw => text.toLowerCase().includes(kw));
+            if (!hasKeyword) {
+                score -= 1;
+                deductions.push("歴史・経済の重要キーワード（colonial, institution, property等）が含まれていません (-1点減点)");
+            }
+
+            if (score < 0) score = 0;
+
+            resDiv.innerHTML = `
+                <div class="border-b pb-2 mb-2 flex justify-between items-center">
+                    <span class="font-bold text-slate-800 text-xs">🎯 簡易自動採点結果</span>
+                    <span class="text-base font-extrabold ${score >= 4 ? 'text-emerald-600' : 'text-amber-600'}">${score} / 5 点</span>
+                </div>
+                ${deductions.length > 0 ? `
+                    <ul class="list-disc pl-4 text-xs text-rose-700 space-y-1 mb-2">
+                        ${deductions.map(d => `<li>${d}</li>`).join('')}
+                    </ul>
+                ` : `<p class="text-xs text-emerald-700 font-bold mb-2">✓ 基本的な文字数および必須キーワード条件をクリアしています！</p>`}
+                <p class="text-[10pt] text-slate-500 mt-1">※文法・表現の精緻な指導や模範解答の取得には「AI診断プロンプト作成」をご活用ください。</p>
+            `;
+        }
+
+        function generateAIPrompt() {
+            const taskId = document.getElementById('essaySelect').value;
+            const userText = document.getElementById('essayInput').value.trim();
+            if (!userText) { alert("回答を入力してください。"); return; }
+            
+            document.getElementById('aiPromptText').value = `あなたは英検準1級および経済史論文のプロの添削指導者です。
+以下の【厳格な採点ルール】に従い、生徒の英語解答（目標: 60〜90語）を評価・添削してください。
+
+【採点ルール（持ち点：5点満点）】
+1. 内容が間違っている／質問の意図から外れている場合：即 0点
+2. 単語数ルール（目安: 60〜90語）：
+   - 60語に満たない場合： -2点減点
+   - 100語を超える場合： -1点減点
+3. 文法・表現：あまりに文法がひどい場合： -1点減点
+4. ロジック・一貫性：ロジックが不十分な場合： -1点減点
+5. 丸コピーチェック：本文の文章をただの丸コピーした場合： -1点減点
+
+【対象タスク (Task ${taskId})】
+"${taskPrompts[taskId]}"
+
+【生徒の英語解答】
+"${userText}"
+
+【返答フォーマット（必ず以下の【5つの見出し】形式で出力してください）】
+■ 評価得点: X / 5点
+
+■ 1. 提出文 (Original Answer):
+(生徒の提出英文)
+
+■ 2. 添削 ＆ 減点理由 (Corrections & Deductions):
+(単語数評価、文法ミスや修正箇所の解説・減点理由)
+
+■ 3. 模範解答 (Model Answer):
+(英検準1級〜1級レベルの60〜90語で構成された洗練された模範解答英文)
+
+■ 4. 和訳 (Japanese Translation):
+(模範解答英文の正確な日本語訳)
+
+■ 5. 学習アドバイス (Educational Feedback):
+(語彙・文法・論理構成に関する具体的な学習アドバイス)`;
+
+            document.getElementById('aiPromptBox').classList.remove('hidden');
+        }
+
+        function copyPromptText() {
+            const area = document.getElementById('aiPromptText');
+            area.select();
+            document.execCommand('copy');
+            alert("プロンプトをクリップボードにコピーしました！AIに貼り付けて採点させてください。");
+        }
+
+        function renderAIFeedback() {
+            const input = document.getElementById('aiFeedbackInput').value.trim();
+            const renderDiv = document.getElementById('aiFeedbackRender');
+            const contentDiv = document.getElementById('aiFeedbackContent');
+
+            if (!input) {
+                alert("AIの返答テキストを貼り付けてください。");
+                return;
+            }
+
+            contentDiv.textContent = input;
+            renderDiv.classList.remove('hidden');
+        }
+
+        function printAIFeedbackOnly() {
+            const printContent = document.getElementById('aiFeedbackContent').textContent;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>AI Essay Evaluation & Feedback Sheet</title>
+                    <style>
+                        @page { size: A4 portrait; margin: 15mm; }
+                        body { 
+                            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; 
+                            font-size: 10pt; 
+                            line-height: 1.6; 
+                            color: #1e293b; 
+                            margin: 0; 
+                            padding: 0; 
+                        }
+                        .header { border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 15px; }
+                        .title { font-size: 16pt; font-weight: bold; color: #1e3a8a; margin: 0; }
+                        .subtitle { font-size: 9pt; color: #64748b; margin-top: 4px; }
+                        .content-box { 
+                            white-space: pre-wrap; 
+                            word-wrap: break-word; 
+                            background-color: #f8fafc; 
+                            border: 1px solid #cbd5e1; 
+                            border-radius: 8px; 
+                            padding: 15px; 
+                            font-size: 9.5pt;
+                            line-height: 1.7;
+                        }
+                        .footer { margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 8px; font-size: 8pt; color: #94a3b8; text-align: right; }
+                    </style>
+                </head>
+                <body>
+                    <div class="header">
+                        <div class="title">🤖 Essay Evaluation & Feedback Sheet</div>
+                        <div class="subtitle">Why Did the U.S. Become Rich Activity - Writing Assessment</div>
+                    </div>
+                    <div class="content-box">${escapeHtml(printContent)}</div>
+                    <div class="footer">Generated by Youtube-Videos-Turned-Into-Reading-Materials Series</div>
+                    <script>
+                        window.onload = function() { window.print(); window.close(); };
+                    <\/script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        function printPart(partNum) {
+            document.querySelectorAll('.print-target').forEach(el => el.classList.remove('active-print'));
+            const target = document.getElementById(`print-page-${partNum}`);
+            if (target) { 
+                target.classList.add('active-print'); 
+                window.print(); 
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMCQs();
+            renderVocab();
+            renderNumericButtons();
+            setGeoMode('study');
+            changeTask();
+        });
+    </script>
+</body>
+</html>
