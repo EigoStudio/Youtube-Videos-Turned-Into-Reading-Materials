@@ -736,28 +736,128 @@
             ]
         };
 
-        // 単語テストデータ (20問)
+        // 単語テストデータ (20問: 正解 A〜D を均等配分)
         const vocabQuizData = [
-            { w: "Metastasize", d: "Spread rapidly and dangerously to other areas.", options: ["急速に悪化・波及する", "平和的に調停する", "完全に終息する", "公式に布告する"], c: 0 },
-            { w: "Incendiary", d: "Designed to cause fires, or tending to stir up conflict.", options: ["扇動的な・激化させる", "抑制的な", "宗教的な", "学術的な"], c: 0 },
-            { w: "Affluent", d: "Having a great deal of money; wealthy.", options: ["裕福な・富裕層の", "貧困にあえぐ", "未開拓の", "過疎化した"], c: 0 },
-            { w: "Vanguard", d: "A group of people leading the way in new ideas.", options: ["先鋒・先駆者", "落伍者", "治安維持部隊", "傍観者"], c: 0 },
-            { w: "Repudiate", d: "Refuse to accept or be associated with.", options: ["断固として拒絶・否認する", "歓迎して導入する", "妥協する", "資金援助する"], c: 0 },
-            { w: "Indoctrination", d: "The process of teaching a person to accept a set of beliefs uncritically.", options: ["思想的教化・刷り込み", "客観的科学分析", "自然淘汰", "無差別爆撃"], c: 0 },
-            { w: "Culpability", d: "Responsibility for a fault or wrong; blame.", options: ["有責性・罪を負うべきこと", "免責特権", "無罪の証明", "名誉と栄光"], c: 0 },
-            { w: "Atonement", d: "Reparation for a wrong or injury; amends.", options: ["贖罪・罪滅ぼし", "軍事報復", "領土拡張", "富の蓄積"], c: 0 },
-            { w: "Milieu", d: "The physical or social setting in which something occurs.", options: ["社会的環境・雰囲気", "法的拘束力", "地政学的境界", "軍事的要塞"], c: 0 },
-            { w: "Chauvinism", d: "Exaggerated or aggressive patriotism; excessive nationalism.", options: ["盲目的な排他愛国主義", "国際協調主義", "絶対的平和主義", "無政府主義"], c: 0 },
-            { w: "Corrosive", d: "Tending to cause something to be gradually destroyed.", options: ["（信頼や社会を）蝕む・腐食性の", "強固にする", "一時的に流行する", "癒着した"], c: 0 },
-            { w: "Subjugation", d: "The action of bringing someone or something under domination or control.", options: ["征服・隷属させること", "相互協力", "経済的支援", "同盟締結"], c: 0 },
-            { w: "Binary", d: "Relating to, composed of, or involving two things.", options: ["二元論的な・白黒思考の", "多面的な", "無限に広がる", "循環的な"], c: 0 },
-            { w: "Retrospective", d: "Looking back on or dealing with past events.", options: ["過去を振り返る・回顧的な", "先見性のある", "突発的な", "客観的実証の"], c: 0 },
-            { w: "Resilience", d: "The capacity to withstand or recover quickly from difficulties.", options: ["回復力・強靭性", "極度の脆弱性", "絶対的服従", "無関心"], c: 0 },
-            { w: "Forfeit", d: "Lose or be deprived of property or a right as a penalty.", options: ["（権利や資格を）喪失する", "獲得する", "永久保持する", "委託する"], c: 0 },
-            { w: "Malaise", d: "A general feeling of discomfort, illness, or unease.", options: ["（社会全体の）停滞感・閉塞感", "圧倒的幸福感", "軍事的優勢", "経済的繁栄"], c: 0 },
-            { w: "Taboo", d: "Prohibited or restricted by social custom.", options: ["タブー・社会的禁忌", "国家的祝日", "義務教育", "推奨される行動"], c: 0 },
-            { w: "Prerequisite", d: "A thing that is required as a prior condition for something else.", options: ["必須条件・前提条件", "副産物", "不必要な要素", "偶発的事象"], c: 0 },
-            { w: "Disproportionate", d: "Too large or too small in comparison with something else.", options: ["不均衡な・不釣り合いな", "完全に均等な", "統計的に正確な", "微々たる"], c: 0 }
+            { 
+                w: "Metastasize", 
+                d: "Spread rapidly and dangerously to other areas.", 
+                options: ["平和的に調停する", "急速に悪化・波及する", "完全に終息する", "公式に布告する"], 
+                c: 1 
+            },
+            { 
+                w: "Incendiary", 
+                d: "Designed to cause fires, or tending to stir up conflict.", 
+                options: ["学術的な", "宗教的な", "扇動的な・激化させる", "抑制的な"], 
+                c: 2 
+            },
+            { 
+                w: "Affluent", 
+                d: "Having a great deal of money; wealthy.", 
+                options: ["貧困にあえぐ", "未開拓の", "過疎化した", "裕福な・富裕層の"], 
+                c: 3 
+            },
+            { 
+                w: "Vanguard", 
+                d: "A group of people leading the way in new ideas.", 
+                options: ["先鋒・先駆者", "落伍者", "治安維持部隊", "傍観者"], 
+                c: 0 
+            },
+            { 
+                w: "Repudiate", 
+                d: "Refuse to accept or be associated with.", 
+                options: ["歓迎して導入する", "妥協する", "断固として拒絶・否認する", "資金援助する"], 
+                c: 2 
+            },
+            { 
+                w: "Indoctrination", 
+                d: "The process of teaching a person to accept a set of beliefs uncritically.", 
+                options: ["客観的科学分析", "思想的教化・刷り込み", "自然淘汰", "無差別爆撃"], 
+                c: 1 
+            },
+            { 
+                w: "Culpability", 
+                d: "Responsibility for a fault or wrong; blame.", 
+                options: ["免責特権", "無罪の証明", "名誉と栄光", "有責性・罪を負うべきこと"], 
+                c: 3 
+            },
+            { 
+                w: "Atonement", 
+                d: "Reparation for a wrong or injury; amends.", 
+                options: ["贖罪・罪滅ぼし", "軍事報復", "領土拡張", "富の蓄積"], 
+                c: 0 
+            },
+            { 
+                w: "Milieu", 
+                d: "The physical or social setting in which something occurs.", 
+                options: ["法的拘束力", "社会的環境・雰囲気", "地政学的境界", "軍事的要塞"], 
+                c: 1 
+            },
+            { 
+                w: "Chauvinism", 
+                d: "Exaggerated or aggressive patriotism; excessive nationalism.", 
+                options: ["国際協調主義", "絶対的平和主義", "盲目的な排他愛国主義", "無政府主義"], 
+                c: 2 
+            },
+            { 
+                w: "Corrosive", 
+                d: "Tending to cause something to be gradually destroyed.", 
+                options: ["（信頼や社会を）蝕む・腐食性の", "強固にする", "一時的に流行する", "癒着した"], 
+                c: 0 
+            },
+            { 
+                w: "Subjugation", 
+                d: "The action of bringing someone or something under domination or control.", 
+                options: ["相互協力", "経済的支援", "同盟締結", "征服・隷属させること"], 
+                c: 3 
+            },
+            { 
+                w: "Binary", 
+                d: "Relating to, composed of, or involving two things.", 
+                options: ["多面的な", "二元論的な・白黒思考の", "無限に広がる", "循環的な"], 
+                c: 1 
+            },
+            { 
+                w: "Retrospective", 
+                d: "Looking back on or dealing with past events.", 
+                options: ["先見性のある", "突発的な", "過去を振り返る・回顧的な", "客観的実証の"], 
+                c: 2 
+            },
+            { 
+                w: "Resilience", 
+                d: "The capacity to withstand or recover quickly from difficulties.", 
+                options: ["回復力・強靭性", "極度の脆弱性", "絶対的服従", "無関心"], 
+                c: 0 
+            },
+            { 
+                w: "Forfeit", 
+                d: "Lose or be deprived of property or a right as a penalty.", 
+                options: ["獲得する", "永久保持する", "委託する", "（権利や資格を）喪失する"], 
+                c: 3 
+            },
+            { 
+                w: "Malaise", 
+                d: "A general feeling of discomfort, illness, or unease.", 
+                options: ["圧倒的幸福感", "（社会全体の）停滞感・閉塞感", "軍事的優勢", "経済的繁栄"], 
+                c: 1 
+            },
+            { 
+                w: "Taboo", 
+                d: "Prohibited or restricted by social custom.", 
+                options: ["国家的祝日", "義務教育", "推奨される行動", "タブー・社会的禁忌"], 
+                c: 3 
+            },
+            { 
+                w: "Prerequisite", 
+                d: "A thing that is required as a prior condition for something else.", 
+                options: ["必須条件・前提条件", "副産物", "不必要な要素", "偶発的事象"], 
+                c: 0 
+            },
+            { 
+                w: "Disproportionate", 
+                d: "Too large or too small in comparison with something else.", 
+                options: ["完全に均等な", "統計的に正確な", "不均衡な・不釣り合いな", "微々たる"], 
+                c: 2 
+            }
         ];
 
         // UI表示制御
