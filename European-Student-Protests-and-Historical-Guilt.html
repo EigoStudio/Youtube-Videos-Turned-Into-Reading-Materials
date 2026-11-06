@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Student Protests and Historical Guilt | 英検準1級〜1級レベル学習アプリ</title>
+    <script src="auth.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ==================== 印刷・PDF出力専用CSS (A4・1枚完結最適化) ==================== */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 12mm 15mm 12mm 15mm;
+            }
+            .no-print, header, nav, .tab-content, .bg-white.shadow-sm.mb-8 { display: none !important; }
+            body { 
+                font-size: 10pt; 
+                line-height: 1.8; 
+                color: #000; 
+                background: #fff; 
+                margin: 0; 
+                padding: 0; 
+            }
+            
+            .print-only-container { display: block !important; }
+            .print-target { display: none !important; }
+            .print-target.active-print { display: block !important; }
+
+            .reading-text-print p {
+                line-height: 1.95 !important;
+                font-size: 9.5pt !important;
+                text-align: justify;
+                margin-bottom: 12px !important;
+            }
+
+            .mcq-print-list li {
+                margin-bottom: 10px !important;
+                line-height: 1.6 !important;
+                font-size: 9pt !important;
+            }
+
+            .essay-print-box {
+                border: 1px solid #333;
+                padding: 10px 12px;
+                margin-top: 12px;
+                background-color: #fafafa;
+                line-height: 1.6 !important;
+            }
+        }
+        .print-only-container { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <!-- ヘッダーナビゲーション -->
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 no-print">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <h1 class="text-lg font-bold tracking-wide">European Student Protests and Historical Guilt</h1>
+            <div class="flex items-center space-x-3 mt-2 sm:mt-0">
+                <span class="text-xs text-slate-300 hidden md:inline">各パート画面のボタンで単独印刷可能</span>
+                <a href="https://www.youtube.com/watch?v=0KEdyubliHY" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-3 py-1.5 rounded-lg flex items-center space-x-1 transition shadow">
+                    <span>📺</span>
+                    <span>YouTubeで元動画をチェック！</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+
+        <!-- アプリ概要バナー -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+            <div class="border-b pb-4 mb-4 flex justify-between items-start">
+                <div>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">英検準1級〜1級レベル総合学習アプリ</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">European Student Protests and Historical Guilt</h2>
+                    <p class="text-slate-600 text-sm mt-1">Social Analysis of European Demonstrations, White Guilt, and Postwar Education</p>
+                </div>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                本アプリは、欧州全域に拡大する学生デモの深層心理と「自虐的歴史観（White Guilt）」、そして日本の戦後GHQ教育（自虐史観）との構造的類似性を考察する学習教材です。<br>
+                読解、各パートごとの単独印刷（ワークシート出力）、厳格な5点満点ルールによる論述採点・AIプロンプト生成、20問の語彙テストを搭載しています。
+            </p>
+        </div>
+
+        <!-- タブナビゲーション -->
+        <div class="flex overflow-x-auto space-x-1 border-b border-slate-200 mb-6 no-print">
+            <button onclick="showTab('part1')" id="tab-part1" class="tab-btn px-4 py-2.5 border-b-2 border-indigo-600 font-bold text-indigo-600 text-sm whitespace-nowrap">Part 1: 欧州学生デモの拡大</button>
+            <button onclick="showTab('part2')" id="tab-part2" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 2: White Guiltの心理構造</button>
+            <button onclick="showTab('part3')" id="tab-part3" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 3: 健全な歴史観のあり方</button>
+            <button onclick="showTab('part4')" id="tab-part4" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">Part 4: 日本の自虐史観との比較</button>
+            <button onclick="showTab('part5')" id="tab-part5" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap bg-amber-50 rounded-t">✍️ Part 5: 論述採点</button>
+            <button onclick="showTab('part6')" id="tab-part6" class="tab-btn px-4 py-2.5 border-b-2 border-transparent text-slate-500 font-medium text-sm whitespace-nowrap">📚 Part 6: 単語テスト</button>
+        </div>
+
+        <!-- PART 1 -->
+        <div id="part1" class="tab-content">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 1 学習画面】</span>
+                <button onclick="printPart(1)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 1 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 1: The Spreading Wave of Student Protests Across European Campuses
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        In recent months, a wave of fervent student activism has swept across prestigious universities throughout Western Europe. What began as isolated sit-ins at renowned institutions like Sciences Po and the Sorbonne in Paris swiftly <u class="font-bold border-b-2 border-amber-500">metastasized</u> into coordinated demonstrations across the United Kingdom, Germany, the Netherlands, and Switzerland. Campus quadrangles have been transformed into encampments, with demonstrators establishing barricades, chanting incendiary slogans, and clashing with municipal riot police. While international commentators initially hypothesized that these volatile demonstrations were driven predominantly by newly arrived immigrant communities or second-generation diasporas, on-the-ground observations revealed a far more startling reality.
+                    </p>
+                    <p>
+                        A substantial proportion—if not the overwhelming majority—of the most impassioned participants in these university occupations are native white, affluent European youths. Born into generational privilege and enrolled in elite academic faculties, these young intellectuals have willingly placed themselves on the ideological vanguard. Rather than merely demonstrating solidarity with geopolitical causes, they exhibit a level of radicalism that frequently outpaces the communities they claim to advocate for. They aggressively demand that university administrations divest from international partnerships and systematically repudiate Western diplomatic alliances.
+                    </p>
+                    <p>
+                        This sudden surge in aggressive student mobilization cannot be explained merely as a spontaneous reaction to foreign conflicts. Instead, it reflects an underlying cultural fracture simmering within European societies. The presence of indigenous middle-class students leading these civil disruptions indicates that a profound psychological transformation has taken hold in modern Western academia. To comprehend why young people who enjoy unprecedented freedom and prosperity are fiercely repudiating their own societal structures, one must investigate the ideological indoctrination that defines contemporary humanities education.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 1: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part1" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 1 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 1:</strong> Summarize how student protests spread across Europe and explain the demographic composition of the demonstrators. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(1)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 2 -->
+        <div id="part2" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 2 学習画面】</span>
+                <button onclick="printPart(2)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 2 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 2: The Ideological Engine: White Guilt and Masochistic Pedagogy
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        The psychological catalyst propelling native European students toward self-directed hostility is a phenomenon sociological analysts identify as "White Guilt." Over the past several decades, European primary and secondary educational curricula have undergone a radical revisionist shift. History lessons no longer emphasize the Enlightenment, scientific innovation, or the democratic institutional advancements pioneered by European civilization. Instead, modern syllabi dwell <u class="font-bold border-b-2 border-amber-500">disproportionately</u> on the historical transgressions of the West—namely transatlantic slavery, imperial subjugation, economic exploitation, and colonial violence.
+                    </p>
+                    <p>
+                        This relentless pedagogical focus on national transgressions inculcates a pervasive sense of hereditary culpability among impressionable pupils. From an early age, students are conditioned to perceive Western identity not as an inheritance of legal equality and cultural achievement, but as an enduring badge of historic villainy. Consequently, young Europeans are systematically deprived of healthy civic pride. Deprived of a positive cultural anchor, this suppressed self-esteem manifests as existential guilt, convincing many that their affluent circumstances are illegitimate and built entirely upon the subjugation of the Global South.
+                    </p>
+                    <p>
+                        In this intellectual milieu, joining extreme protest movements becomes a quasi-religious ritual of moral atonement. By shouting down Western institutions, occupying administrative buildings, and siding unconditionally with anti-Western causes, these students seek to cleanse themselves of ancestral shame. Their radicalism is less about pragmatic foreign policy than it is an urgent therapeutic mechanism to perform repentance in public. They project their internal, self-deprecating neuroses onto geopolitical controversies, viewing their own civilization as uniquely corrupt and worthy of dismantling.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 2: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part2" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 2 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 2:</strong> Explain how school education shapes "White Guilt" and why participating in radical protests serves as moral atonement for European youths. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(2)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 3 -->
+        <div id="part3" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 3 学習画面】</span>
+                <button onclick="printPart(3)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 3 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 3: Reclaiming Historical Balance: Toward Critical and Constructive Patriotism
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        A sustainable and healthy democratic society cannot endure when rooted in unmitigated national self-loathing. While uncritical chauvinism—blind nationalism that glorifies every historical act—is inherently dangerous, excessive historical masochism is equally corrosive to social cohesion. True intellectual maturity requires cultivating what political philosophers designate as "critical patriotism": a balanced perspective that acknowledges historical mistakes with intellectual honesty while vigorously upholding the enduring institutional virtues of one’s nation.
+                    </p>
+                    <p>
+                        Educators and academic institutions must reject simplistic moral binary frameworks that reduce human history to crude categories of villainous oppressors and blameless victims. History is an evolutionary chronicle of universal human struggle, where every civilization across the globe has engaged in territorial conquest and moral failures. What distinguishes modern constitutional democracies is not an absence of historical sins, but their unique capacity for self-correction. The ideals of individual liberty, human rights, representative governance, and the rule of law were forged through arduous debate within the Western tradition, providing the very conceptual tools used today to combat injustice.
+                    </p>
+                    <p>
+                        By contextualizing historical errors within the standards of their contemporary eras rather than judging them solely through retrospective 21st-century lenses, school education can foster <u class="font-bold border-b-2 border-amber-500">resilience</u> rather than paralysis. Instilling young people with a legitimate appreciation for the hard-won achievements of their forebears empowers them to contribute constructively to the future. A nation that completely loses confidence in its own foundational legitimacy forfeits the moral resolve required to defend its democratic institutions against authoritarian challenges.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 3: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part3" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 3 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 3:</strong> Describe the concept of "critical patriotism" and why achieving historical balance is essential for democratic stability. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(3)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 4 -->
+        <div id="part4" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-4 no-print">
+                <span class="text-xs text-slate-500 font-bold">【Part 4 学習画面】</span>
+                <button onclick="printPart(4)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                    🖨️ Part 4 のみ単独印刷 (ワークシート出力)
+                </button>
+            </div>
+            <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+                <h3 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3 mb-3">
+                    Part 4: Postwar Parallels: Japan's WGIP Legacy and the Challenge of Jigyaku-shikan
+                </h3>
+                <div class="text-slate-700 leading-relaxed space-y-4 font-serif">
+                    <p>
+                        The psychological malaise observed among contemporary European youths bears a striking structural resemblance to the postwar educational experience of Japan. Following its defeat in 1945, Japan was placed under the authority of the Supreme Commander for the Allied Powers (GHQ). To ensure that Japan would never again pose a military threat to Western powers, GHQ instituted comprehensive ideological reorientation initiatives, most notably the War Guilt Information Program (WGIP). Media narratives, public broadcasting, and academic textbooks were rigorously <u class="font-bold border-b-2 border-amber-500">censored</u> and rewritten to impress upon the Japanese populace that their nation had been an unmitigated militaristic aggressor solely responsible for the catastrophic Pacific conflict.
+                    </p>
+                    <p>
+                        This institutionalized re-education gave birth to what Japanese intellectuals term <i>Jigyaku-shikan</i> (a masochistic or self-deprecating view of national history). For subsequent generations of postwar students, school curricula overwhelmingly focused on wartime atrocities, colonial misdeeds, and unconditional submission to pacifist idealism, while systematically obscuring Japan's rich cultural continuity, modernization triumphs, and complex geopolitical security dilemmas during the Meiji and Showa periods. Similar to Western pupils afflicted with White Guilt, postwar Japanese youths were socialized to equate legitimate national pride with dangerous militarism, rendering public expressions of patriotism culturally taboo.
+                    </p>
+                    <p>
+                        The consequence of this enduring educational legacy is a noticeable erosion of civic self-confidence and strategic resolve in the face of modern international tensions. When an entire generation is conditioned to believe that their national heritage is fundamentally flawed, collective defense, sovereign dignity, and diplomatic determination are gravely weakened. By examining the crisis of self-deprecating history currently paralyzing Western Europe, Japanese learners gain a crucial mirror to re-examine their own postwar narratives, discovering that overcoming inherited collective guilt is an indispensable prerequisite for securing independent national survival.
+                    </p>
+                </div>
+            </article>
+
+            <section class="bg-slate-100 p-6 rounded-xl border border-slate-200 mb-6 no-print">
+                <h4 class="font-bold text-slate-900 mb-4 flex items-center">
+                    <span class="bg-indigo-600 text-white rounded-full w-6 h-6 inline-flex items-center justify-center text-xs mr-2">Q</span>
+                    Part 4: Multiple Choice Questions (5 Questions)
+                </h4>
+                <div id="mcq-part4" class="space-y-6"></div>
+            </section>
+
+            <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 no-print">
+                <h4 class="font-bold text-amber-900 text-sm mb-2">✍️ Part 4 論文課題（ボーナス）</h4>
+                <p class="text-xs text-amber-800 mb-3"><strong>Task 4:</strong> Compare the psychological impact of GHQ's WGIP in postwar Japan with modern European White Guilt. (Target: 60 - 90 words in English)</p>
+                <button onclick="goToPart5(4)" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs px-4 py-2 rounded transition shadow">
+                    👉 Part 5 の論述採点ルームで回答・採点する
+                </button>
+            </div>
+        </div>
+
+        <!-- PART 5: ESSAY GRADER -->
+        <div id="part5" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+                <h3 class="text-xl font-bold text-indigo-900 mb-2">✍️ Part 5: 論述採点 ＆ AI診断プロンプト生成ルーム</h3>
+                <p class="text-sm text-slate-600 mb-6">
+                    Part 1〜4の各論述問題を選択し、英語で回答（単語数目安: 60〜90語）を入力してください。<br>
+                    【5点満点の厳格な減点ルール】に従って自動判定し、さらにAI用の詳細採点プロンプトを生成します。
+                </p>
+
+                <!-- ルールカード -->
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 mb-6 text-xs text-slate-700 space-y-1">
+                    <p class="font-bold text-slate-900 text-sm mb-1">⚖️ 採点ルール（持ち点5点満点）:</p>
+                    <p>• <strong>内容の誤り:</strong> 史実・文章の趣旨と異なる、または質問の回答になっていない場合は <strong class="text-rose-600">0点</strong></p>
+                    <p>• <strong>単語数チェック (目標 60〜90語):</strong> 60語に満たない場合は <strong class="text-rose-600">2点減点</strong> / 100語を超える場合は <strong class="text-rose-600">1点減点</strong></p>
+                    <p>• <strong>文法的破綻:</strong> あまりに文法がひどい場合は <strong class="text-rose-600">1点減点</strong></p>
+                    <p>• <strong>ロジック破綻:</strong> ロジックがメチャクチャな場合は <strong class="text-rose-600">1点減点</strong></p>
+                    <p>• <strong>本文の丸コピー:</strong> 自分の言葉を使わず読み物の文章をただの丸コピーした場合は <strong class="text-rose-600">1点減点</strong></p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-indigo-900 mb-2">1. 採点・回答したい論述タスクを選択:</label>
+                        <select id="essaySelect" onchange="changeTask()" class="w-full p-2.5 border border-slate-300 rounded-lg text-sm bg-white font-semibold text-slate-800 focus:ring-2 focus:ring-indigo-500">
+                            <option value="1">Task 1 (Part 1): Spread of European student protests and demographic composition</option>
+                            <option value="2">Task 2 (Part 2): White Guilt, school education, and protests as moral atonement</option>
+                            <option value="3">Task 3 (Part 3): Concept of "critical patriotism" and overcoming historical masochism</option>
+                            <option value="4">Task 4 (Part 4): Comparison between GHQ's WGIP in Japan and Western White Guilt</option>
+                        </select>
+                    </div>
+
+                    <div id="taskPromptDisplay" class="bg-indigo-50 p-3.5 rounded-lg border border-indigo-200 text-xs text-indigo-950 font-medium"></div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">2. あなたの回答 (English):</label>
+                        <textarea id="essayInput" rows="5" oninput="updateWordCount()" class="w-full p-3 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Write your English essay response here..."></textarea>
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span id="charCount">Characters: 0</span>
+                            <span id="wordCount" class="font-bold text-indigo-900">Words: 0 (Target: 60 - 90 words)</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <button onclick="gradeLocally()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition shadow">
+                            🎯 簡易自動採点（ルールチェック）
+                        </button>
+                        <button onclick="generateAIPrompt()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition shadow">
+                            🤖 AI診断プロンプト作成
+                        </button>
+                    </div>
+
+                    <!-- Rule Result -->
+                    <div id="localResult" class="hidden mt-4 p-4 rounded-lg bg-slate-100 border border-slate-300"></div>
+
+                    <!-- AI Prompt Generator Box -->
+                    <div id="aiPromptBox" class="hidden mt-4 p-5 rounded-lg bg-emerald-50 border border-emerald-200">
+                        <h4 class="font-bold text-emerald-950 text-sm mb-2">📋 AI診断用プロンプト（コピー用）</h4>
+                        <p class="text-xs text-emerald-800 mb-3">
+                            以下のプロンプトをコピーし、ChatGPTやGemini等の外部AIに貼り付けて実行してください。<br>
+                            返ってきた診断メッセージを下の入力ボックスに貼り付けると、アプリ上に綺麗に出力・レンダリングされます。
+                        </p>
+                        <textarea id="aiPromptText" rows="8" readonly class="w-full p-3 text-xs font-mono bg-white border border-emerald-300 rounded-lg mb-2"></textarea>
+                        <button onclick="copyPromptText()" class="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2 rounded shadow transition">
+                            📋 プロンプトをクリップボードにコピー
+                        </button>
+
+                        <div class="mt-5 pt-4 border-t border-emerald-200">
+                            <label class="block text-sm font-bold text-emerald-950 mb-1">📥 AIからの回答・診断テキストをペースト:</label>
+                            <textarea id="aiFeedbackInput" rows="5" class="w-full p-2.5 text-xs border border-emerald-300 rounded-lg bg-white" placeholder="AIが出力した評価・アドバイス・解答例をここにペースト..."></textarea>
+                            <button onclick="renderAIFeedback()" class="mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-5 py-2 rounded transition shadow">
+                                ✨ アプリ上に綺麗に出力する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Output Card (Printable Target) -->
+            <div id="aiFeedbackRender" class="hidden p-6 rounded-xl bg-white border-2 border-indigo-200 shadow-md mb-8">
+                <div class="flex justify-between items-center pb-3 border-b border-slate-200 mb-4 no-print">
+                    <h4 class="font-bold text-indigo-950 text-base">🤖 AI採点・診断アドバイスシート</h4>
+                    <button onclick="printAIFeedbackOnly()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3 py-1.5 rounded transition shadow">
+                        🖨️ 採点結果・アドバイスのみを印刷
+                    </button>
+                </div>
+                <div id="aiFeedbackContent" class="text-xs text-slate-900 whitespace-pre-wrap leading-relaxed font-sans"></div>
+            </div>
+        </div>
+
+        <!-- PART 6: VOCABULARY TEST (20 Questions) -->
+        <div id="part6" class="tab-content hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 no-print">
+                <div class="flex justify-between items-center mb-4 pb-2 border-b">
+                    <div>
+                        <h3 class="text-xl font-bold text-indigo-900">📚 Part 6: Vocabulary Test (全20問)</h3>
+                        <p class="text-xs text-slate-500 mt-1">本文章（Part 1〜4）で使用されている英検準1級〜1級レベルの学術・社会問題語彙テスト</p>
+                    </div>
+                    <button onclick="printPart(6)" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs px-3.5 py-2 rounded transition shadow">
+                        🖨️ 単語テストのみを単独印刷 (ワークシート出力)
+                    </button>
+                </div>
+                <div id="vocabContainer" class="space-y-6"></div>
+            </div>
+        </div>
+
+        <!-- ==================== 印刷専用テンプレート（完全個別・行間拡張） ==================== -->
+        <div class="print-only-container">
+
+            <!-- Print Part 1 -->
+            <div id="print-page-1" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">European Student Protests and Historical Guilt</h1>
+                    <p class="text-[9pt] text-slate-700">Part 1 Worksheet: The Spreading Wave of Campus Protests</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>In recent months, a wave of fervent student activism has swept across prestigious universities throughout Western Europe. What began as isolated sit-ins at renowned institutions like Sciences Po and the Sorbonne in Paris swiftly <u><b>metastasized</b></u> into coordinated demonstrations across the United Kingdom, Germany, the Netherlands, and Switzerland. Campus quadrangles have been transformed into encampments, with demonstrators establishing barricades, chanting incendiary slogans, and clashing with municipal riot police. While international commentators initially hypothesized that these volatile demonstrations were driven predominantly by newly arrived immigrant communities or second-generation diasporas, on-the-ground observations revealed a far more startling reality.</p>
+                    <p>A substantial proportion—if not the overwhelming majority—of the most impassioned participants in these university occupations are native white, affluent European youths. Born into generational privilege and enrolled in elite academic faculties, these young intellectuals have willingly placed themselves on the ideological vanguard. Rather than merely demonstrating solidarity with geopolitical causes, they exhibit a level of radicalism that frequently outpaces the communities they claim to advocate for. They aggressively demand that university administrations divest from international partnerships and systematically repudiate Western diplomatic alliances.</p>
+                    <p>This sudden surge in aggressive student mobilization cannot be explained merely as a spontaneous reaction to foreign conflicts. Instead, it reflects an underlying cultural fracture simmering within European societies. The presence of indigenous middle-class students leading these civil disruptions indicates that a profound psychological transformation has taken hold in modern Western academia. To comprehend why young people who enjoy unprecedented freedom and prosperity are fiercely repudiating their own societal structures, one must investigate the ideological indoctrination that defines contemporary humanities education.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-1"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 1 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Summarize how student protests spread across Europe and explain the demographic composition of the demonstrators.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 2 -->
+            <div id="print-page-2" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">European Student Protests and Historical Guilt</h1>
+                    <p class="text-[9pt] text-slate-700">Part 2 Worksheet: White Guilt and Masochistic Pedagogy</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>The psychological catalyst propelling native European students toward self-directed hostility is a phenomenon sociological analysts identify as "White Guilt." Over the past several decades, European primary and secondary educational curricula have undergone a radical revisionist shift. History lessons no longer emphasize the Enlightenment, scientific innovation, or the democratic institutional advancements pioneered by European civilization. Instead, modern syllabi dwell <u><b>disproportionately</b></u> on the historical transgressions of the West—namely transatlantic slavery, imperial subjugation, economic exploitation, and colonial violence.</p>
+                    <p>This relentless pedagogical focus on national transgressions inculcates a pervasive sense of hereditary culpability among impressionable pupils. From an early age, students are conditioned to perceive Western identity not as an inheritance of legal equality and cultural achievement, but as an enduring badge of historic villainy. Consequently, young Europeans are systematically deprived of healthy civic pride. Deprived of a positive cultural anchor, this suppressed self-esteem manifests as existential guilt, convincing many that their affluent circumstances are illegitimate and built entirely upon the subjugation of the Global South.</p>
+                    <p>In this intellectual milieu, joining extreme protest movements becomes a quasi-religious ritual of moral atonement. By shouting down Western institutions, occupying administrative buildings, and siding unconditionally with anti-Western causes, these students seek to cleanse themselves of ancestral shame. Their radicalism is less about pragmatic foreign policy than it is an urgent therapeutic mechanism to perform repentance in public. They project their internal, self-deprecating neuroses onto geopolitical controversies, viewing their own civilization as uniquely corrupt and worthy of dismantling.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-2"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 2 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Explain how school education shapes "White Guilt" and why participating in radical protests serves as moral atonement for European youths.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 3 -->
+            <div id="print-page-3" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">European Student Protests and Historical Guilt</h1>
+                    <p class="text-[9pt] text-slate-700">Part 3 Worksheet: Toward Critical and Constructive Patriotism</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>A sustainable and healthy democratic society cannot endure when rooted in unmitigated national self-loathing. While uncritical chauvinism—blind nationalism that glorifies every historical act—is inherently dangerous, excessive historical masochism is equally corrosive to social cohesion. True intellectual maturity requires cultivating what political philosophers designate as "critical patriotism": a balanced perspective that acknowledges historical mistakes with intellectual honesty while vigorously upholding the enduring institutional virtues of one’s nation.</p>
+                    <p>Educators and academic institutions must reject simplistic moral binary frameworks that reduce human history to crude categories of villainous oppressors and blameless victims. History is an evolutionary chronicle of universal human struggle, where every civilization across the globe has engaged in territorial conquest and moral failures. What distinguishes modern constitutional democracies is not an absence of historical sins, but their unique capacity for self-correction. The ideals of individual liberty, human rights, representative governance, and the rule of law were forged through arduous debate within the Western tradition, providing the very conceptual tools used today to combat injustice.</p>
+                    <p>By contextualizing historical errors within the standards of their contemporary eras rather than judging them solely through retrospective 21st-century lenses, school education can foster <u><b>resilience</b></u> rather than paralysis. Instilling young people with a legitimate appreciation for the hard-won achievements of their forebears empowers them to contribute constructively to the future. A nation that completely loses confidence in its own foundational legitimacy forfeits the moral resolve required to defend its democratic institutions against authoritarian challenges.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-3"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 3 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Describe the concept of "critical patriotism" and why achieving historical balance is essential for democratic stability.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 4 -->
+            <div id="print-page-4" class="print-target">
+                <div class="border-b-2 border-slate-800 pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">European Student Protests and Historical Guilt</h1>
+                    <p class="text-[9pt] text-slate-700">Part 4 Worksheet: Postwar Parallels: Japan's WGIP Legacy</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Reading Score: ____ / 5</span>
+                    </div>
+                </div>
+                
+                <div class="reading-text-print font-serif space-y-2">
+                    <p>The psychological malaise observed among contemporary European youths bears a striking structural resemblance to the postwar educational experience of Japan. Following its defeat in 1945, Japan was placed under the authority of the Supreme Commander for the Allied Powers (GHQ). To ensure that Japan would never again pose a military threat to Western powers, GHQ instituted comprehensive ideological reorientation initiatives, most notably the War Guilt Information Program (WGIP). Media narratives, public broadcasting, and academic textbooks were rigorously <u><b>censored</b></u> and rewritten to impress upon the Japanese populace that their nation had been an unmitigated militaristic aggressor solely responsible for the catastrophic Pacific conflict.</p>
+                    <p>This institutionalized re-education gave birth to what Japanese intellectuals term <i>Jigyaku-shikan</i> (a masochistic or self-deprecating view of national history). For subsequent generations of postwar students, school curricula overwhelmingly focused on wartime atrocities, colonial misdeeds, and unconditional submission to pacifist idealism, while systematically obscuring Japan's rich cultural continuity, modernization triumphs, and complex geopolitical security dilemmas during the Meiji and Showa periods. Similar to Western pupils afflicted with White Guilt, postwar Japanese youths were socialized to equate legitimate national pride with dangerous militarism, rendering public expressions of patriotism culturally taboo.</p>
+                    <p>The consequence of this enduring educational legacy is a noticeable erosion of civic self-confidence and strategic resolve in the face of modern international tensions. When an entire generation is conditioned to believe that their national heritage is fundamentally flawed, collective defense, sovereign dignity, and diplomatic determination are gravely weakened. By examining the crisis of self-deprecating history currently paralyzing Western Europe, Japanese learners gain a crucial mirror to re-examine their own postwar narratives, discovering that overcoming inherited collective guilt is an indispensable prerequisite for securing independent national survival.</p>
+                </div>
+
+                <h3 class="font-bold text-[9pt] mb-1.5 border-t pt-2">[ Questions 1-5 ]</h3>
+                <ol class="list-decimal pl-4 text-[8.5pt] mcq-print-list" id="print-mcq-4"></ol>
+
+                <div class="essay-print-box">
+                    <h4 class="font-bold text-[8.5pt]">✍️ Bonus Essay Task 4 (Write your answer on a separate sheet / Target: 60-90 words):</h4>
+                    <p class="text-[8.5pt] leading-snug mt-1">Compare the psychological impact of GHQ's WGIP in postwar Japan with modern European White Guilt.</p>
+                </div>
+            </div>
+
+            <!-- Print Part 6 (Vocabulary Worksheet - 1 Column layout) -->
+            <div id="print-page-6" class="print-target">
+                <div class="border-b pb-2 mb-3 text-center">
+                    <h1 class="text-base font-bold">Vocabulary Test Worksheet</h1>
+                    <p class="text-[8.5pt] text-slate-600">Part 6: Academic & Social Terminology Vocabulary Test (20 Questions)</p>
+                    <div class="flex justify-between text-[8.5pt] font-semibold mt-2">
+                        <span>Name: ______________________</span>
+                        <span>Date: ____________</span>
+                        <span>Score: ____ / 20</span>
+                    </div>
+                </div>
+                <div class="space-y-2 text-[8.5pt]" id="print-vocab-list"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        // 論述タスク プロンプト定義
+        const taskPrompts = {
+            1: "Summarize how student protests spread across Europe and explain the demographic composition of the demonstrators.",
+            2: "Explain how school education shapes 'White Guilt' and why participating in radical protests serves as moral atonement for European youths.",
+            3: "Describe the concept of 'critical patriotism' and why achieving historical balance is essential for democratic stability.",
+            4: "Compare the psychological impact of GHQ's WGIP in postwar Japan with modern European White Guilt."
+        };
+
+        // 読解選択問題データ (正解をA〜Dに均等分散)
+        const mcqData = {
+            1: [
+                { 
+                    q: "Where did the recent wave of European student protests originate before spreading internationally?", 
+                    options: [
+                        "Sciences Po and the Sorbonne in Paris", 
+                        "Oxford and Cambridge in the UK", 
+                        "Leiden University in the Netherlands", 
+                        "The University of Zurich in Switzerland"
+                    ], 
+                    correct: 0, 
+                    exp: "正解: (A) パリの政治学院（Sciences Po）やソルボンヌ大学での座り込みが発端となりました。" 
+                },
+                { 
+                    q: "What surprising demographic fact was revealed about the protestors on European campuses?", 
+                    options: [
+                        "They were composed exclusively of foreign exchange students", 
+                        "They were mainly newly arrived working-class immigrants", 
+                        "A substantial proportion were native white, affluent European youths", 
+                        "They were led primarily by tenured senior professors"
+                    ], 
+                    correct: 2, 
+                    exp: "正解: (C) 移民や外国人中心ではなく、裕福な自国の白人学生たちが過激な前線に多く立っていました。" 
+                },
+                { 
+                    q: "What specific demand do the occupying students frequently present to university authorities?", 
+                    options: [
+                        "To eliminate student tuition fees across all departments", 
+                        "To replace standard exams with oral assessments", 
+                        "To recruit more international academic staff", 
+                        "To divest from international partnerships and repudiate Western diplomatic ties"
+                    ], 
+                    correct: 3, 
+                    exp: "正解: (D) 大学当局に対し、国際提携からの資金引き揚げ（divest）や西側外交同盟の否定を要求しています。" 
+                },
+                { 
+                    q: "According to Part 1, what does the presence of affluent native youths in these riots signify?", 
+                    options: [
+                        "A sudden nationwide spike in graduate unemployment", 
+                        "A deep cultural and psychological fracture simmering within Western academia", 
+                        "A superficial trend orchestrated purely by social media algorithms", 
+                        "A government-sponsored civic initiative"
+                    ], 
+                    correct: 1, 
+                    exp: "正解: (B) 豊かさと自由を享受する若者が自国を否定する、西欧社会内部の深い文化的・心理的分断を示しています。" 
+                },
+                { 
+                    q: "The underlined word 'metastasized' in Paragraph 1 is closest in meaning to:", 
+                    options: [
+                        "spread rapidly and uncontrollably", 
+                        "receded into complete silence", 
+                        "settled through peaceful dialogue", 
+                        "concluded with legal compromises"
+                    ], 
+                    correct: 0, 
+                    exp: "正解: (A) metastasize は病巣が転移するように「（悪影響などが）急速に拡大・波及する」ことを意味します。" 
+                }
+            ],
+            2: [
+                { 
+                    q: "What is identified as the underlying psychological catalyst behind European students' self-directed hostility?", 
+                    options: [
+                        "Severe material poverty", 
+                        "Traditional religious extremism", 
+                        "Existential White Guilt instilled through education", 
+                        "Intense academic burnout"
+                    ], 
+                    correct: 2, 
+                    exp: "正解: (C) 西欧文明の負の側面のみを内面化させた「White Guilt（白人の罪悪感）」が原動力とされています。" 
+                },
+                { 
+                    q: "How has European history education transformed over recent decades according to the passage?", 
+                    options: [
+                        "It disproportionately highlights colonial violence, transatlantic slavery, and Western transgressions", 
+                        "It strictly focuses on ancient Greco-Roman mythology", 
+                        "It completely glorifies 19th-century imperial conquests", 
+                        "It emphasizes European scientific and institutional triumphs over past misdeeds"
+                    ], 
+                    correct: 0, 
+                    exp: "正解: (A) 科学や民主主義の成果よりも、植民地支配や奴隷制などの加害の歴史ばかりを不釣り合いに強調するようになりました。" 
+                },
+                { 
+                    q: "What emotional consequence does this educational focus impose on impressionable students?", 
+                    options: [
+                        "An inflated sense of national superiority", 
+                        "A total apathy toward all global developments", 
+                        "An eagerness to join diplomatic and military services", 
+                        "A pervasive sense of hereditary culpability and existential guilt"
+                    ], 
+                    correct: 3, 
+                    exp: "正解: (D) 自国の歴史に対する「遺伝的な罪悪感（hereditary culpability）」と自己否定的な実存的罪の意識を植え付けられます。" 
+                },
+                { 
+                    q: "Why do young protestors treat participating in radical protests as moral atonement?", 
+                    options: [
+                        "To qualify for competitive government scholarships", 
+                        "To purge ancestral shame and demonstrate moral righteousness in public", 
+                        "To demand immediate refunds of college tuition", 
+                        "To evade legal accountability for academic plagiarism"
+                    ], 
+                    correct: 1, 
+                    exp: "正解: (B) 祖先の歴史的罪の意識を洗い流し、公の場で自らの道徳的潔白・正しさを証明する「贖罪の儀式」となっているためです。" 
+                },
+                { 
+                    q: "The underlined word 'disproportionately' in Paragraph 1 is closest in meaning to:", 
+                    options: [
+                        "rigorously and scientifically", 
+                        "minimally and casually", 
+                        "to an excessive, unbalanced degree", 
+                        "fairly and objectively"
+                    ], 
+                    correct: 2, 
+                    exp: "正解: (C) disproportionately は「不釣り合いに、過度に、偏って」という意味です。" 
+                }
+            ],
+            3: [
+                { 
+                    q: "What does the author state regarding excessive historical masochism?", 
+                    options: [
+                        "It is the sole prerequisite for constitutional peace", 
+                        "It is just as corrosive to social cohesion as aggressive chauvinism", 
+                        "It naturally strengthens a nation's military defenses", 
+                        "It prevents all future diplomatic disputes"
+                    ], 
+                    correct: 1, 
+                    exp: "正解: (B) 盲目的な排他愛国主義（chauvinism）と同様に、極端な自虐史観（historical masochism）も社会統合を内側から破壊します。" 
+                },
+                { 
+                    q: "What is the core definition of 'critical patriotism' advocated by political philosophers?", 
+                    options: [
+                        "An unconditional celebration of all past government decisions", 
+                        "A total disavowal of national borders and legal citizenship", 
+                        "A doctrine that strictly forbids judicial criticism of national policies", 
+                        "A balanced view acknowledging historical errors while upholding enduring democratic virtues"
+                    ], 
+                    correct: 3, 
+                    exp: "正解: (D) 過去の過ちを率直に認めつつも、自国の制度や自由の価値を正当に評価・擁護するバランスの取れた愛国心です。" 
+                },
+                { 
+                    q: "What truly distinguishes modern constitutional democracies according to Part 3?", 
+                    options: [
+                        "Their unique capacity for institutional self-correction guided by human rights and the rule of law", 
+                        "An absolute historical innocence free from any territorial conquest", 
+                        "Permanent economic immunity to global trade downturns", 
+                        "Unchallenged cultural dominance across other continents"
+                    ], 
+                    correct: 0, 
+                    exp: "正解: (A) 過去に罪がなかったことではなく、法の支配や人権の理念によって「自らを自己修正できる能力」を持った点です。" 
+                },
+                { 
+                    q: "What severe danger arises if a democratic society completely loses confidence in its foundational legitimacy?", 
+                    options: [
+                        "Its public schools revert to classical Greek literature", 
+                        "Its regional alliances dissolve into voluntary trade pacts", 
+                        "It forfeits the moral resolve required to defend democratic institutions against authoritarian threats", 
+                        "It experiences an instantaneous economic boom driven by foreign investment"
+                    ], 
+                    correct: 2, 
+                    exp: "正解: (C) 自国の正当性を完全に信じられなくなると、権威主義勢力の脅威から民主的制度を守る精神的気概を失ってしまいます。" 
+                },
+                { 
+                    q: "The underlined word 'resilience' in Paragraph 3 is closest in meaning to:", 
+                    options: [
+                        "rigid resistance to all societal evolution", 
+                        "the capacity to recover strength and withstand adversity", 
+                        "unquestioning surrender to external directives", 
+                        "a tendency to dwell endlessly on historical failure"
+                    ], 
+                    correct: 1, 
+                    exp: "正解: (B) resilience は「回復力、立ち直る力、逆境に耐える強靭さ」を意味します。" 
+                }
+            ],
+            4: [
+                { 
+                    q: "What specific initiative implemented by GHQ in postwar Japan closely parallels the ideological mechanism of White Guilt?", 
+                    options: [
+                        "The Dodge Line Economic Stabilization Plan", 
+                        "The Land Reform Agricultural Reorganization Directive", 
+                        "The San Francisco Peace Treaty Conference", 
+                        "The War Guilt Information Program (WGIP)"
+                    ], 
+                    correct: 3, 
+                    exp: "正解: (D) GHQがメディア・言論・教育を通じて実施した「ウォー・ギルト・インフォメーション・プログラム（WGIP）」が酷似しています。" 
+                },
+                { 
+                    q: "What was the primary ideological objective of GHQ's educational and media policies in occupied Japan?", 
+                    options: [
+                        "To prepare the Japanese military for rapid joint deployments abroad", 
+                        "To convince the Japanese populace that their nation was an unmitigated militaristic aggressor solely responsible for the war", 
+                        "To mandate English as the official national language across government bodies", 
+                        "To restore the feudal samurai administrative codes"
+                    ], 
+                    correct: 1, 
+                    exp: "正解: (B) 日本が一方的な侵略国であり戦争の全責任があるという罪悪感を徹底して植え付けることでした。" 
+                },
+                { 
+                    q: "How has 'Jigyaku-shikan' (self-deprecating history) affected generations of postwar Japanese citizens?", 
+                    options: [
+                        "It socialized them to equate legitimate national pride and collective defense with dangerous militarism", 
+                        "It inspired a widespread revival of aggressive imperial nationalism", 
+                        "It led to the complete abandonment of modern industrial technologies", 
+                        "It induced citizens to ignore all regional trade partnerships"
+                    ], 
+                    correct: 0, 
+                    exp: "正解: (A) 健全な愛国心や自国防衛の意識を持つこと自体を軍国主義と同一視し、タブー視する心理を植え付けました。" 
+                },
+                { 
+                    q: "What long-term security consequence is produced when an entire population internalizes inherited historical guilt?", 
+                    options: [
+                        "It prompts neighboring countries to completely disarm their borders", 
+                        "It eliminates the need for modern diplomatic alliances", 
+                        "It gravely erodes sovereign dignity, strategic resolve, and collective self-confidence", 
+                        "It automatically ensures sustained double-digit economic expansion"
+                    ], 
+                    correct: 2, 
+                    exp: "正解: (C) 主権国家としての誇り、戦略的決断力、国民的自信を著しく損ない、有事への対応力を麻痺させます。" 
+                },
+                { 
+                    q: "The underlined word 'censored' in Paragraph 1 is closest in meaning to:", 
+                    options: [
+                        "widely distributed without governmental oversight", 
+                        "translated into foreign tongues for global readers", 
+                        "honored and awarded state cultural commendations", 
+                        "officially examined and suppressed to control information"
+                    ], 
+                    correct: 3, 
+                    exp: "正解: (D) censor は「（出版物・言論等を）公権力が検閲して削除・抑圧する」ことを意味します。" 
+                }
+            ]
+        };
+
+        // 単語テストデータ (20問)
+        const vocabQuizData = [
+            { w: "Metastasize", d: "Spread rapidly and dangerously to other areas.", options: ["急速に悪化・波及する", "平和的に調停する", "完全に終息する", "公式に布告する"], c: 0 },
+            { w: "Incendiary", d: "Designed to cause fires, or tending to stir up conflict.", options: ["扇動的な・激化させる", "抑制的な", "宗教的な", "学術的な"], c: 0 },
+            { w: "Affluent", d: "Having a great deal of money; wealthy.", options: ["裕福な・富裕層の", "貧困にあえぐ", "未開拓の", "過疎化した"], c: 0 },
+            { w: "Vanguard", d: "A group of people leading the way in new ideas.", options: ["先鋒・先駆者", "落伍者", "治安維持部隊", "傍観者"], c: 0 },
+            { w: "Repudiate", d: "Refuse to accept or be associated with.", options: ["断固として拒絶・否認する", "歓迎して導入する", "妥協する", "資金援助する"], c: 0 },
+            { w: "Indoctrination", d: "The process of teaching a person to accept a set of beliefs uncritically.", options: ["思想的教化・刷り込み", "客観的科学分析", "自然淘汰", "無差別爆撃"], c: 0 },
+            { w: "Culpability", d: "Responsibility for a fault or wrong; blame.", options: ["有責性・罪を負うべきこと", "免責特権", "無罪の証明", "名誉と栄光"], c: 0 },
+            { w: "Atonement", d: "Reparation for a wrong or injury; amends.", options: ["贖罪・罪滅ぼし", "軍事報復", "領土拡張", "富の蓄積"], c: 0 },
+            { w: "Milieu", d: "The physical or social setting in which something occurs.", options: ["社会的環境・雰囲気", "法的拘束力", "地政学的境界", "軍事的要塞"], c: 0 },
+            { w: "Chauvinism", d: "Exaggerated or aggressive patriotism; excessive nationalism.", options: ["盲目的な排他愛国主義", "国際協調主義", "絶対的平和主義", "無政府主義"], c: 0 },
+            { w: "Corrosive", d: "Tending to cause something to be gradually destroyed.", options: ["（信頼や社会を）蝕む・腐食性の", "強固にする", "一時的に流行する", "癒着した"], c: 0 },
+            { w: "Subjugation", d: "The action of bringing someone or something under domination or control.", options: ["征服・隷属させること", "相互協力", "経済的支援", "同盟締結"], c: 0 },
+            { w: "Binary", d: "Relating to, composed of, or involving two things.", options: ["二元論的な・白黒思考の", "多面的な", "無限に広がる", "循環的な"], c: 0 },
+            { w: "Retrospective", d: "Looking back on or dealing with past events.", options: ["過去を振り返る・回顧的な", "先見性のある", "突発的な", "客観的実証の"], c: 0 },
+            { w: "Resilience", d: "The capacity to withstand or recover quickly from difficulties.", options: ["回復力・強靭性", "極度の脆弱性", "絶対的服従", "無関心"], c: 0 },
+            { w: "Forfeit", d: "Lose or be deprived of property or a right as a penalty.", options: ["（権利や資格を）喪失する", "獲得する", "永久保持する", "委託する"], c: 0 },
+            { w: "Malaise", d: "A general feeling of discomfort, illness, or unease.", options: ["（社会全体の）停滞感・閉塞感", "圧倒的幸福感", "軍事的優勢", "経済的繁栄"], c: 0 },
+            { w: "Taboo", d: "Prohibited or restricted by social custom.", options: ["タブー・社会的禁忌", "国家的祝日", "義務教育", "推奨される行動"], c: 0 },
+            { w: "Prerequisite", d: "A thing that is required as a prior condition for something else.", options: ["必須条件・前提条件", "副産物", "不必要な要素", "偶発的事象"], c: 0 },
+            { w: "Disproportionate", d: "Too large or too small in comparison with something else.", options: ["不均衡な・不釣り合いな", "完全に均等な", "統計的に正確な", "微々たる"], c: 0 }
+        ];
+
+        // UI表示制御
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('border-indigo-600', 'text-indigo-600', 'font-bold');
+                el.classList.add('border-transparent', 'text-slate-500');
+            });
+            document.getElementById(tabId).classList.remove('hidden');
+            const btn = document.getElementById('tab-' + tabId);
+            if (btn) {
+                btn.classList.add('border-indigo-600', 'text-indigo-600', 'font-bold');
+                btn.classList.remove('border-transparent', 'text-slate-500');
+            }
+        }
+
+        function renderMCQs() {
+            [1, 2, 3, 4].forEach(partNum => {
+                const container = document.getElementById(`mcq-part${partNum}`);
+                const printContainer = document.getElementById(`print-mcq-${partNum}`);
+                if (!container) return;
+
+                container.innerHTML = '';
+                if (printContainer) printContainer.innerHTML = '';
+
+                mcqData[partNum].forEach((qObj, idx) => {
+                    // 画面上表示
+                    const div = document.createElement('div');
+                    div.className = 'bg-white p-4 rounded-lg border border-slate-200 shadow-sm';
+                    div.innerHTML = `
+                        <p class="font-bold text-slate-800 text-sm mb-3">${idx + 1}. ${qObj.q}</p>
+                        <div class="space-y-2 text-xs">
+                            ${qObj.options.map((opt, oIdx) => `
+                                <label class="flex items-start p-2 rounded hover:bg-slate-50 cursor-pointer border border-transparent hover:border-slate-200">
+                                    <input type="radio" name="p${partNum}_q${idx}" value="${oIdx}" onclick="checkMCQ(${partNum}, ${idx}, ${oIdx})" class="mt-0.5 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="ml-2 text-slate-700 font-medium">(${String.fromCharCode(65+oIdx)}) ${opt}</span>
+                                </label>
+                            `).join('')}
+                        </div>
+                        <div id="fb_p${partNum}_q${idx}" class="hidden mt-3 p-3 text-xs rounded-md"></div>
+                    `;
+                    container.appendChild(div);
+
+                    // 印刷用ワークシート（そのパート専用）
+                    if (printContainer) {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <strong>${qObj.q}</strong>
+                            <div class="grid grid-cols-2 gap-x-2 gap-y-0.5 mt-0.5 text-[8pt]">
+                                ${qObj.options.map((opt, oIdx) => `<div>(${String.fromCharCode(65+oIdx)}) ${opt}</div>`).join('')}
+                            </div>
+                        `;
+                        printContainer.appendChild(li);
+                    }
+                });
+            });
+        }
+
+        function checkMCQ(partNum, qIdx, selectedIdx) {
+            const qObj = mcqData[partNum][qIdx];
+            const fb = document.getElementById(`fb_p${partNum}_q${qIdx}`);
+            fb.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-900', 'border-emerald-200', 'bg-rose-50', 'text-rose-900', 'border-rose-200');
+            fb.classList.add('border');
+
+            if (selectedIdx === qObj.correct) {
+                fb.classList.add('bg-emerald-50', 'text-emerald-900', 'border-emerald-200');
+                fb.innerHTML = `<strong>✓ 正解！</strong> ${qObj.exp}`;
+            } else {
+                fb.classList.add('bg-rose-50', 'text-rose-900', 'border-rose-200');
+                fb.innerHTML = `<strong>✗ 不正解</strong> ${qObj.exp}`;
+            }
+        }
+
+        function renderVocab() {
+            const container = document.getElementById('vocabContainer');
+            const printVocab = document.getElementById('print-vocab-list');
+            if (!container) return;
+
+            container.innerHTML = '';
+            if (printVocab) printVocab.innerHTML = '';
+
+            vocabQuizData.forEach((v, idx) => {
+                // 画面表示
+                const card = document.createElement('div');
+                card.className = 'bg-slate-50 p-4 rounded-lg border border-slate-200';
+                card.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-indigo-900 text-base">${idx+1}. ${v.w}</span>
+                        <span class="text-xs text-slate-500 italic font-serif">${v.d}</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        ${v.options.map((opt, oIdx) => `
+                            <button onclick="checkVocab(${idx}, ${oIdx})" class="text-left p-2 bg-white border border-slate-300 rounded text-xs hover:bg-indigo-50 transition font-medium">
+                                (${String.fromCharCode(65+oIdx)}) ${opt}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="v-fb-${idx}" class="hidden mt-2 text-xs font-bold"></div>
+                `;
+                container.appendChild(card);
+
+                // 印刷用単語テスト（1カラム縦並び ＆ 選択肢4列並び）
+                if (printVocab) {
+                    const div = document.createElement('div');
+                    div.className = 'border p-1.5 rounded mb-1';
+                    div.innerHTML = `
+                        <div class="font-bold text-[8.5pt] mb-0.5">${idx+1}. <span class="text-indigo-950 font-serif">${v.w}</span> <span class="text-[7.5pt] font-normal text-slate-600">(${v.d})</span></div>
+                        <div class="grid grid-cols-4 gap-1 text-[7.5pt]">
+                            ${v.options.map((opt, oIdx) => `<div>(${String.fromCharCode(65+oIdx)}) ${opt}</div>`).join('')}
+                        </div>
+                    `;
+                    printVocab.appendChild(div);
+                }
+            });
+        }
+
+        function checkVocab(vIdx, selectedOpt) {
+            const item = vocabQuizData[vIdx];
+            const fb = document.getElementById(`v-fb-${vIdx}`);
+            fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+
+            if (selectedOpt === item.c) {
+                fb.classList.add('text-emerald-600');
+                fb.textContent = "✓ 正解！ " + item.w + " = " + item.options[item.c];
+            } else {
+                fb.classList.add('text-rose-600');
+                fb.textContent = "✗ 不正解。 正解は (" + String.fromCharCode(65+item.c) + ") " + item.options[item.c];
+            }
+        }
+
+        function goToPart5(taskId) {
+            showTab('part5');
+            document.getElementById('essaySelect').value = taskId;
+            changeTask();
+        }
+
+        function changeTask() {
+            const taskId = document.getElementById('essaySelect').value;
+            const promptDisplay = document.getElementById('taskPromptDisplay');
+            promptDisplay.innerHTML = `<strong>選択中の論述問 (Task ${taskId}):</strong><br>${taskPrompts[taskId]}`;
+        }
+
+        function updateWordCount() {
+            const text = document.getElementById('essayInput').value;
+            const charCount = text.length;
+            const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+            document.getElementById('charCount').textContent = `Characters: ${charCount}`;
+            document.getElementById('wordCount').textContent = `Words: ${wordCount} (Target: 60 - 90 words)`;
+        }
+
+        // 採点機能
+        function gradeLocally() {
+            const text = document.getElementById('essayInput').value.trim();
+            const resDiv = document.getElementById('localResult');
+            resDiv.classList.remove('hidden');
+
+            if (!text) {
+                resDiv.innerHTML = `<p class="text-rose-600 text-xs font-bold">回答が入力されていません。英文を入力してください。</p>`;
+                return;
+            }
+
+            let score = 5;
+            let deductions = [];
+
+            const wordCount = text.trim().split(/\s+/).length;
+
+            if (wordCount < 60) {
+                score -= 2;
+                deductions.push(`単語数不足: 現在 ${wordCount} 語 (60語に満たないため -2点減点)`);
+            } else if (wordCount > 100) {
+                score -= 1;
+                deductions.push(`単語数超過: 現在 ${wordCount} 語 (100語を超えているため -1点減点)`);
+            }
+
+            const exactPhrases = [
+                "swept across prestigious universities",
+                "War Guilt Information Program",
+                "psychological catalyst propelling native European",
+                "quasi-religious ritual of moral atonement",
+                "erosion of civic self-confidence"
+            ];
+            let copyCount = 0;
+            exactPhrases.forEach(p => { if (text.includes(p)) copyCount++; });
+            if (copyCount >= 2) {
+                score -= 1;
+                deductions.push("本文フレーズの直接的な丸コピーが検出されました (-1点減点)");
+            }
+
+            const keyWords = ["protest", "guilt", "education", "student", "history", "patriotism", "japan", "ghq", "atonement", "pride", "west"];
+            const hasKeyword = keyWords.some(kw => text.toLowerCase().includes(kw));
+            if (!hasKeyword) {
+                score -= 1;
+                deductions.push("論題に関連するコアキーワードが含まれていません (-1点減点)");
+            }
+
+            if (score < 0) score = 0;
+
+            resDiv.innerHTML = `
+                <div class="border-b pb-2 mb-2 flex justify-between items-center">
+                    <span class="font-bold text-slate-800 text-xs">🎯 ルールベース自動採点結果</span>
+                    <span class="text-base font-extrabold ${score >= 4 ? 'text-emerald-600' : 'text-amber-600'}">${score} / 5 点</span>
+                </div>
+                ${deductions.length > 0 ? `
+                    <ul class="list-disc pl-4 text-xs text-rose-700 space-y-1 mb-2">
+                        ${deductions.map(d => `<li>${d}</li>`).join('')}
+                    </ul>
+                ` : `<p class="text-xs text-emerald-700 font-bold mb-2">✓ 基本的な文字数・記述ルールをクリアしています！</p>`}
+                <p class="text-[10pt] text-slate-500">※精密な英文法・論理展開・解答例・添削アドバイスの生成には、下の「AI診断プロンプト作成」ボタンをご利用ください。</p>
+            `;
+        }
+
+        function generateAIPrompt() {
+            const taskId = document.getElementById('essaySelect').value;
+            const userText = document.getElementById('essayInput').value.trim();
+            const promptBox = document.getElementById('aiPromptBox');
+            const promptArea = document.getElementById('aiPromptText');
+
+            if (!userText) {
+                alert("まずは回答欄に英語で文章を入力してください。");
+                return;
+            }
+
+            const promptText = `あなたは英検準1級〜1級および国際社会論・近現代史英語論文のプロの添削指導者です。
+以下の【厳格な採点ルール】に従い、生徒の英語解答（単語数目安: 60〜90語）を評価・添削してください。
+
+【採点ルール（持ち点：5点満点）】
+1. 内容が間違っている／質問の意図から外れている場合：即 0点
+2. 単語数ルール（目安: 60〜90語）：
+   - 60語に満たない場合： -2点減点
+   - 100語を超える場合： -1点減点
+3. 文法・表現：あまりに文法がひどい場合： -1点減点
+4. ロジック・一貫性：ロジックがメチャクチャな場合： -1点減点
+5. 丸コピーチェック：自分の言葉を使わず読み物の文章をただの丸コピーした場合：内容が合っていても -1点減点
+
+【対象タスク (Task ${taskId})】
+"${taskPrompts[taskId]}"
+
+【生徒の英語解答】
+"${userText}"
+
+【返答フォーマット（必ず以下の見出し形式で出力してください）】
+■ 評価得点: X / 5点
+
+■ 1. 提出された英文 (Original Answer):
+(生徒の解答)
+
+■ 2. 減点・修正箇所 (Corrected Version & Deductions):
+(単語数評価、文法ミスや修正ポイントの解説)
+
+■ 3. ブラッシュアップ解答例 (Refined Model Answer):
+(英検準1級〜1級レベルの60〜90語で構成された自然で洗練された模範解答英文および日本語訳)
+
+■ 4. 学習アドバイス (Educational Feedback):
+(表現・文法・論理構成に関する具体的な学習アドバイス)`;
+
+            promptArea.value = promptText;
+            promptBox.classList.remove('hidden');
+        }
+
+        function copyPromptText() {
+            const area = document.getElementById('aiPromptText');
+            area.select();
+            document.execCommand('copy');
+            alert("プロンプトをクリップボードにコピーしました！AIに貼り付けて採点させてください。");
+        }
+
+        function renderAIFeedback() {
+            const input = document.getElementById('aiFeedbackInput').value.trim();
+            const renderDiv = document.getElementById('aiFeedbackRender');
+            const contentDiv = document.getElementById('aiFeedbackContent');
+
+            if (!input) {
+                alert("AIの返答テキストを貼り付けてください。");
+                return;
+            }
+
+            contentDiv.textContent = input;
+            renderDiv.classList.remove('hidden');
+        }
+
+        function printPart(partNum) {
+            document.querySelectorAll('.print-target').forEach(el => {
+                el.classList.remove('active-print');
+            });
+
+            const target = document.getElementById(`print-page-${partNum}`);
+            if (target) {
+                target.classList.add('active-print');
+                window.print();
+            }
+        }
+
+        function printAIFeedbackOnly() {
+            const printContent = document.getElementById('aiFeedbackContent').textContent;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>AI Feedback & Writing Evaluation Sheet</title>
+                    <style>
+                        body { font-family: sans-serif; font-size: 11pt; line-height: 1.6; color: #000; margin: 30px; }
+                        h1 { font-size: 16pt; border-bottom: 2px solid #000; padding-bottom: 5px; margin-bottom: 15px; }
+                        .content { white-space: pre-wrap; word-wrap: break-word; }
+                        .footer { margin-top: 30px; border-top: 1px solid #ccc; pt-10px; font-size: 9pt; text-style: italic; }
+                    </style>
+                </head>
+                <body>
+                    <h1>🤖 Essay Evaluation & Feedback Sheet</h1>
+                    <div class="content">${escapeHtml(printContent)}</div>
+                    <div class="footer">Generated by European Student Protests & Historical Guilt App</div>
+                    <script>
+                        window.onload = function() { window.print(); window.close(); };
+                    <\/script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMCQs();
+            renderVocab();
+            changeTask();
+        });
+    </script>
+</body>
+</html>
